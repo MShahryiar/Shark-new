@@ -1,0 +1,17 @@
+import React from 'react'
+
+const CTA = () => {
+  return (
+    <div className='w-full h-fit md:h-[300px] p-5 md:p-14 '>
+        <div className='p-10 bg-[#e63946] h-full mx-auto rounded-3xl flex md:flex-row gap-5 flex-col  items-center justify-between '>
+          <div className='flex flex-col gap-2 md:text-left text-center'>
+            <h2 className='text-xl md:text-2xl whitespace-nowrap md:text-3xl  text-gray-50 font-semibold'>Thinking about moving to <span className='italic'>Canada</span>?</h2>
+            <p className='whitespace-nowrap text-gray-50 text-lg md:text-xl'>The perfect destination to begin a new life...</p>
+          </div>
+          <button className='hover:-translate-y-2  duration-500 cursor-pointer border-2 rounded-md border-gray-200 px-5 py-3 text-gray-50'>Free Assessment</button>
+        </div>
+    </div>
+  )
+}
+
+export default CTA

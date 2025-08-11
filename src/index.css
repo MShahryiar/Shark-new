@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+:root {
+  --red: #e70013;
+  --blue:#022b5f;
+
+
+}
+
+.bg-primary{
+  background-color: var(--blue);
+}
+.bg-secondary{
+    background-color:var(--red);
+}
+.border-primary {
+  border:1px solid var(--blue);
+}
+.border-secondary{
+    border:1px solid var(--red);
+}
+.border-secondary:hover{
+  border:1px solid transparent;
+}
+.text-primary{
+    color:var(--blue);
+}
+.text-secondary{
+    color:var(--red)
+}
