@@ -1,8 +1,11 @@
+import {ShieldUser, BookOpenText,UserStar,UserRoundX, FastForward, PersonStanding, HousePlus, House, BriefcaseBusiness, Briefcase, FileUser, ClipboardClock, AudioWaveform, Sticker, BookUser  } from "lucide-react"
+
 export const services = [
     {
         id:"canada-immigration-sponsorship-process",
         name:"Canada Immigration Sponsorship Process",
         brief:"If you are a citizen or permanent resident of Canada and at least 18 years old, you can sponsor your relatives to join you in Canada, helping them build a new life, reunite with family, and achieve their dreams abroad.",
+        Icon:ShieldUser,
    sections: [
     {
       type: "imageSection",
@@ -72,6 +75,7 @@ export const services = [
     {
         id:"study-in-canada",
         name:"Study Permit Canada",
+        Icon:BookOpenText,
         brief:"Studying in Canada offers the unique advantage of working while studying and after graduation, providing valuable work experience and the opportunity to stay and grow in one of the world’s most welcoming countries.",
         sections: [
     {
@@ -141,6 +145,7 @@ export const services = [
     {
         id:"canadian-citizenship",
         name:"Canadian Citizenship",
+        Icon:UserStar,
         brief:"Become a proud citizen of Canada and enjoy the full rights and privileges it offers. We assist you through the application process, from meeting residency requirements to preparing for the citizenship test and interview.",
           sections: [
     {
@@ -230,6 +235,7 @@ export const services = [
     {
         id:"deportation-from-canada",
         name:"Deportation From Canada",
+        Icon:UserRoundX ,
         brief:"Facing removal from Canada can be stressful. We provide guidance and representation to help you understand your rights, explore appeal options, and work toward stopping or delaying deportation.",
         "sections": [
     {
@@ -283,6 +289,7 @@ export const services = [
     {
         id:"express-entry",
         name:"Express Entry",
+         Icon:FastForward ,
         brief:"A fast-track pathway for skilled workers to become permanent residents of Canada. We help you create a strong profile, improve your CRS score, and navigate every step of the application process.",
         "sections": [
     {
@@ -338,6 +345,7 @@ export const services = [
     {
         id:"humanitarian-application",
         name:"Humanitarian Application",
+          Icon:PersonStanding ,
         brief:"For individuals facing exceptional hardship if required to leave Canada. We assist in preparing strong applications that highlight compassionate grounds, aiming to secure your right to stay.",
         "sections": [
     {
@@ -384,6 +392,7 @@ export const services = [
     {
         id:"permanent-residence",
         name:"Permanent Residence",
+          Icon:HousePlus,
         brief:"Secure your future in Canada with permanent resident status. We guide you through the application process, eligibility checks, and documentation to help you live, work, and study in Canada long-term.",
         "sections": [
     {
@@ -496,6 +505,7 @@ export const services = [
     {
         id:"temporary-resident-permit",
         name:"Temporary Resident Permit",
+          Icon:House ,
         brief:"Allows individuals who are otherwise inadmissible to enter or stay in Canada for a specific period. We help you apply, ensuring your case is clearly presented and meets all requirements.",
         "sections": [
     {
@@ -543,6 +553,7 @@ export const services = [
     {
         id:"post-graduate-work-permit",
         name:"Post Graduate Work Permit",
+          Icon:BriefcaseBusiness ,
         brief:"Enables international graduates from eligible Canadian institutions to work in Canada after completing their studies. We assist with eligibility checks, application preparation, and timely submission.",
         "sections": [
     {
@@ -571,6 +582,7 @@ export const services = [
     {
         id:"work-permit",
         name:"Work Permit",
+          Icon:Briefcase ,
         brief:"Allows foreign nationals to work legally in Canada for a specific employer or under an open permit. We guide you through eligibility, documentation, and application to ensure a smooth process.",
         "sections": [
     {
@@ -591,6 +603,7 @@ export const services = [
     {
   "id": "permit-extension",
   "name": "Permit Extension",
+    Icon:FileUser ,
   "brief": "Get expert help extending your Canadian work, study, or visitor permit to avoid status loss and stay legally in Canada.",
     "sections": [
     {
@@ -636,6 +649,7 @@ export const services = [
     {
         id:"immigration-appeals",
         name:"Immigration Appeals",
+          Icon:ClipboardClock ,
         brief:"Challenging a refused immigration application or removal order? We provide expert guidance and representation to present a strong case before the Immigration Appeal Division.",
         "sections": [
     {
@@ -686,6 +700,7 @@ export const services = [
     {
         id:"admissibility Hearing",
         name:"Admissibility Hearing",
+          Icon:AudioWaveform ,
         brief:"A legal process to determine if you can enter or remain in Canada. We prepare your case, represent you before the Immigration and Refugee Board, and work to protect your status.",
         "sections": [
     {
@@ -750,6 +765,7 @@ export const services = [
     {
         id:"nominee-program",
         name:"Nominee Program",
+          Icon:Sticker ,
         brief:"A pathway for skilled workers, entrepreneurs, and graduates to gain permanent residence through provincial or territorial nomination. We help you choose the right stream and submit a strong application.",   
          "sections": [
     {
@@ -801,6 +817,7 @@ export const services = [
     {
         id:"pre-removal-risk-assessment",
         name:"Pre Removal Risk Assessment (PRRA)",
+          Icon:BookUser ,
         brief:"For individuals facing deportation, this process evaluates the risks they may face if returned to their home country. We assist in building a strong case to protect your safety and future in Canada.",
          "sections": [
     {

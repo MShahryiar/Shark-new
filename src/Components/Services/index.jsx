@@ -30,7 +30,7 @@ const Services = () => {
         
         >
           {services.map((service)=>(
-            <Service name={service.name} key={service.id} id={service.id} brief={service.brief} />
+            <Service name={service.name} key={service.id} id={service.id} brief={service.brief} Icon={service.Icon} />
           ))}
          
         
