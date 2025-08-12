@@ -4,7 +4,7 @@ import { Star } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <div className={`h-screen flex justify-center items-center bg-[url("./images/pattern-4.png")] `}>
+    <div className={`h-screen flex justify-center items-center bg-[url("/images/pattern-4.png")] `}>
         {/* <img src={"./images/pattern-4.png"}/> */}
         <div className='flex justify-center items-center'>
             <div className='flex flex-col items-center'>

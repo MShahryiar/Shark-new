@@ -2,6 +2,7 @@
 import {MapPin,Mail,  Phone} from "lucide-react"
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
+import { FaXTwitter } from "react-icons/fa6";
 
 const SocialNav = () => {
   return (
@@ -37,6 +38,10 @@ const SocialNav = () => {
   <a href="https://youtube.com/@sharkimmigrationca" target="_blank" rel="noopener noreferrer">
     <FaYoutube className="hover:text-[#e70013] duration-300 " />
   </a>
+  <a href="https://x.com/sharkimmca" target="_blank" rel="noopener noreferrer">
+    <FaXTwitter className="hover:text-[#e70013] duration-300 " />
+  </a>
+  
 </div>
     </div>
   )

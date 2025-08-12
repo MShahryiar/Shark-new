@@ -4,10 +4,12 @@ import {AnimatePresence, motion} from "framer-motion"
 import {MapPin,Mail, Clock} from "lucide-react"
 import { X } from 'lucide-react';
 import { AlignJustify, FastForward } from 'lucide-react';
+import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
-import LogoImage from "../../../public/images/Logo.png"
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
+  const navigate = useNavigate()
 const [showFixedNavbar, setShowFixedNavbar] = useState(false);
 const [showSideNavbar, setShowSideNavbar] = useState(false);
 
@@ -34,11 +36,13 @@ useEffect(() => {
   
   return (  
     <>
-    <div  className={`transition-opacity bg-transparent duration-500 border-b-1 border-gray-500 ${
+    <div  className={`transition-opacity bg-transparent duration-500  ${
           showFixedNavbar ? 'opacity-0 pointer-events-none' : 'opacity-100'
         } py-4 px-6  absolute w-full z-40 text-white`}>
       <div className='  w-5/6 flex justify-between  items-center mx-auto'>
-          <img src="/images/Logo.png"  className='h-20 w-auto object-cover' alt='logo'/>
+          <img src="/images/Logo.png"   className='h-20 cursor-pointer w-auto object-cover' alt='logo'
+            onClick={()=>navigate("/")}
+          />
           <ul className='gap-5 font-semibold hidden md:flex'>
              <Link className="group inline-block relative cursor-pointer" to={"/about"}>
                 <span className="text-black  group-hover:text-red-500">About</span>
@@ -68,7 +72,9 @@ useEffect(() => {
         } bg-white shadow-md`}
     >
       <div className='  w-5/6 flex justify-between items-center p-2 mx-auto'>
-          <img src="/images/Logo.png" className='h-20  w-auto object-cover'/>
+          <img src="/images/Logo.png" className='h-20  w-auto object-cover cursor-pointer'
+            onClick={()=>navigate("/")}
+          />
           <ul className='gap-5 font-semibold hidden md:flex'>
              <Link className="text-xl group inline-block relative cursor-pointer" to={"/about"}>
                 <span className="text-black  group-hover:text-red-500">About</span>
@@ -111,7 +117,9 @@ useEffect(() => {
        transition={{ delay:0.5, duration: 0.5 }}
        >
           <div className='h-fit relative'>
-            <img src={"/images/Logo.png"}  className=' h-44 px-5 object-cover' alt="image2" />
+            <img src={"/images/Logo.png"}  className='cursor-pointer h-44 px-5 object-cover' alt="image2" 
+                onClick={()=>navigate("/")}
+            />
           <motion.div
   whileHover={{
     rotate: 90,
@@ -126,7 +134,9 @@ useEffect(() => {
 </motion.div>
           </div>
             <nav className='flex flex-col text-xs'>
-              <li className='px-3 py-2 font-medium  uppercase list-none inset-0 border-t-1 border-b-1 border-gray-500  hover:bg-blue-950 hover:text-white text-red-500   cursor-pointer duration-300'>Home</li>
+              <li className='px-3 py-2 font-medium  uppercase list-none inset-0 border-t-1 border-b-1 border-gray-500  hover:bg-blue-950 hover:text-white text-red-500   cursor-pointer duration-300'
+                onClick={()=>navigate("/")}
+              >Home</li>
               <li className='px-3 py-2 font-medium  uppercase list-none inset-0  border-b-gray-500 border-b-1 cursor-pointer duration-300   hover:bg-blue-950 hover:text-white text-red-500'>About</li>
               <li className='px-3 py-2 font-medium  uppercase list-none inset-0 border-b-gray-500 border-b-1   cursor-pointer duration-300   hover:bg-blue-950 hover:text-white text-red-500'>Contact</li>
               <li className='px-3 py-2 font-medium  uppercase list-none inset-0  border-b-gray-500 border-b-1 cursor-pointer duration-300   hover:bg-blue-950 hover:text-white text-red-500'>Testimonials</li>
@@ -161,6 +171,9 @@ useEffect(() => {
               </a>
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className="hover:text-blue-950 transition-colors duration-500" />
+              </a>
+              <a href="https://x.com/sharkimmca" target="_blank" rel="noopener noreferrer">
+                <FaXTwitter className="hover:text-blue-950 transition-colors duration-500" />
               </a>
             </div>
             </div>

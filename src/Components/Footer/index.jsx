@@ -2,7 +2,7 @@ import React from 'react';
 import { MoveRight, MapPinned, Phone, Clock, Mail } from 'lucide-react';
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
-
+import { FaXTwitter } from "react-icons/fa6";
 import Logo from "../../../public/images/Logo.png"
 
 
@@ -31,6 +31,9 @@ const Footer = () => {
   </a>
     <a href="https://youtube.com/@sharkimmigration.ca"  className="border-1 p-1 group hover:bg-red-500 hover:text-white text-primary hover:border-white not:border-primary  rounded-full p-1" target="_blank" rel="noopener noreferrer">
     <FaYoutube className="size-3  group-hover:text-white transition-colors duration-300 " />
+  </a>
+   <a href="https://x.com/sharkimmca"  className="border-1 p-1 group hover:bg-red-500 hover:text-white text-primary hover:border-white not:border-primary  rounded-full p-1" target="_blank" rel="noopener noreferrer">
+    <FaXTwitter className="size-3  group-hover:text-white transition-colors duration-300 " />
   </a>
 </div>
           </div>

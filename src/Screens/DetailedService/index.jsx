@@ -21,15 +21,16 @@ const DetailedService = () => {
         <Navbar/>
      
          <div className="pt-28 ">
-            <div className="bg-primary h-92 w-full flex justify-center items-center">
+            <div className=" relative h-92  w-full flex justify-center items-center ">
+              <img src={"/images/serviceBanner2.jpg"} className="absolute top-0 left-0 h-full w-full opacity-60 blur-xs -z-10 object-cover"/>
                 <div className="flex flex-col items-center">
-                 <h1 className="text-white text-3xl md:text-5xl text-center max-w-5xl capitalize font-bold">{service.name? service.name:"N/A"}</h1>
+                 <h1 className="text-white text-shadow-lg/50 text-3xl md:text-5xl text-center max-w-5xl capitalize font-bold">{service.name? service.name:"N/A"}</h1>
                  <div className="mt-5 flex gap-2 items-center text-sm md:text-lg">
-                    <Link to="/" className="text-white font-medium  ">Home</Link>
-                    <ChevronRight className="text-white size-5 stroke-3"/>
-                    <Link to="/services" className="text-white font-medium  ">Services</Link>
-                    <ChevronRight className="text-white size-5 stroke-3"/>
-                    <span className="text-white font-medium  ">{service.name}</span>
+                    <Link to="/" className="text-shadow-lg/30 text-white font-medium hover:underline  decoration-3 underline-offset-6 duration-300 transition-all decoration-[#e70013] ">Home</Link>
+                    <ChevronRight className=" size-5 text-secondary stroke-3"/>
+                    <Link to="/services" className="text-white text-shadow-lg/30 font-medium  ">Services</Link>
+                    <ChevronRight className="text-secondary size-5 stroke-3"/>
+                    <span className="text-white font-medium  text-shadow-lg/30">{service.name}</span>
                  </div>
                 </div>
 
@@ -42,15 +43,15 @@ const DetailedService = () => {
            return (
             <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 items-center">
               <div>
-                <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
+                <h2 className="text-3xl font-medium mb-4">{section.heading}</h2>
                 {section.content.map((item, i) => {
                     
                   if (item.type === "paragraph") {
-                      return <p key={i} className="mb-3">{item.text}</p>;
+                      return <p key={i} className="mb-3 text-gray-800 text-justify">{item.text}</p>;
                   }
                   if (item.type === "list") {
                     return (
-                        <ul key={i} className="list-disc list-inside mb-3">
+                        <ul key={i} className="list-disc list-inside text-gray-800 text-justify mb-3">
                         {item.items.map((listItem, liIndex) => (
                           <li key={liIndex}>{listItem}</li>
                         ))}
@@ -70,18 +71,18 @@ const DetailedService = () => {
         if (section.type === "singleColumn") {
             return (
             <div key={index} className="mb-10">
-              <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 text-justify">{section.heading}</h2>
               
               {section.content.map((item, i) => {
                 if (item.type === "heading") {
-                      return <h2 key={i} className="mb-3 font-medium">{item.text}</h2>;
+                      return <h2 key={i} className="mb-3 font-medium text-gray-800 text-justify">{item.text}</h2>;
                   }
                   if (item.type === "paragraph") {
-                  return <p key={i} className="mb-3">{item.text}</p>;
+                  return <p key={i} className="mb-3 text-gray-800 text-justify">{item.text}</p>;
                 }
                 if (item.type === "list") {
                   return (
-                    <ul key={i} className="list-disc list-inside mb-3">
+                    <ul key={i} className="list-disc list-inside mb-3 text-gray-800 text-justify">
                       {item.items.map((listItem, liIndex) => (
                         <li key={liIndex}>{listItem}</li>
                       ))}
