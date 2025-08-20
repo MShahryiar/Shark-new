@@ -1,5 +1,4 @@
-import React from 'react'
-
+import { Quote } from 'lucide-react';
 const Testimonials = () => {
   return (
     <div >
@@ -15,11 +14,13 @@ const Testimonials = () => {
           </div>
         </div>  
         <div className='flex-1 place-items-center grid grid-cols-1 md:grid-cols-2 gap-10  ' >
-          <div className='      h-fit  bg-gray-50 p-4 shadow-xl   '>
+          <div className='  gap-5  flex flex-col items-center text-secondary  h-fit  bg-gray-50 p-4 shadow-xl   '>
+            <Quote className='size-7 '/>
             <p className='font-extralight text-gray-500 text-sm'> I was overwhelmed by the Canadian immigration process, but Shark Immigration Solutions made everything so simple and stress-free. From my initial consultation to receiving my PR, their guidance was clear, professional, and truly caring. I felt supported every step of the way, and now I’m starting my new life in Toronto with confidence. I couldn’t have done it without them! </p>
             <h2 className='text-primary   text-md mt-5'>— Ayesha Khan<br /> <span className='text-sm'>Permanent Resident, Toronto</span></h2>
           </div>
-               <div className='      h-fit  bg-gray-50 p-4 shadow-xl   '>
+             <div className='  gap-5  flex flex-col items-center text-secondary  h-fit  bg-gray-50 p-4 shadow-xl   '>
+            <Quote className='size-7 '/>
             <p className='font-extralight text-gray-500 text-sm'> I was overwhelmed by the Canadian immigration process, but Shark Immigration Solutions made everything so simple and stress-free. From my initial consultation to receiving my PR, their guidance was clear, professional, and truly caring. I felt supported every step of the way, and now I’m starting my new life in Toronto with confidence. I couldn’t have done it without them! </p>
             <h2 className='text-primary   text-md mt-5'>— Ayesha Khan<br /> <span className='text-sm'>Permanent Resident, Toronto</span></h2>
           </div>

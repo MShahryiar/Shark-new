@@ -44,7 +44,7 @@ Our mission is to open doors to Canada through trusted guidance, proven strategi
 
             
           </div>
-          <div className='flex-1 grid grid-cols-2 gap-2 p-10  md:gap-5'>
+          <div className='flex-1 grid grid-cols-1 md:grid-cols-2 gap-2 p-10  md:gap-5'>
             <div className=' flex  max-md:h-fit '>
                 <motion.img 
                      initial={{ scale: 0, opacity: 0, translateZ: -300 }}

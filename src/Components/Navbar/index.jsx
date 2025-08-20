@@ -36,9 +36,9 @@ useEffect(() => {
   
   return (  
     <>
-    <div  className={`transition-opacity bg-transparent duration-500  ${
+    <div  className={`transition-opacity border-b-1 border-gray-200 shadow-sm bg-transparent duration-500  ${
           showFixedNavbar ? 'opacity-0 pointer-events-none' : 'opacity-100'
-        } py-4 px-6  absolute w-full z-40 text-white`}>
+        } py-4 px-6  text-white`}>
       <div className='  w-5/6 flex justify-between  items-center mx-auto'>
           <img src="/images/Logo.png"   className='h-20 cursor-pointer w-auto object-cover' alt='logo'
             onClick={()=>navigate("/")}
