@@ -10,8 +10,14 @@ import { FaXTwitter } from "react-icons/fa6";
 import CTA from "../../Components/CTA"
 import FAQData from "../../data/faqs.js"
 import FAQ from "../../Components/FAQ";
+import { useState } from "react";
 
 const ContactPage = () => {
+  const [openCategory, setOpenCategory] = useState(null)
+
+  const toggleCategory = (index)=>{
+    setOpenCategory(openCategory === index ? null:index)
+  }
   return (
     <div>
       <SocialNav/>
@@ -100,9 +106,15 @@ s
       </div>
       <div className="flex flex-col gap-2 ">
 
-          {FAQData.map((categories, index, faqs)=>(
+          {FAQData.map((cat, i)=>(
             <>
-            <FAQ key={index} title={categories.title}  faqs={categories.faqs}/>
+            <FAQ  
+            key={i}
+          index={i}
+          title={cat.title}
+          faqs={cat.faqs}
+          isOpen={openCategory === i}
+          onToggle={toggleCategory}/>
             {/* <ul>
               {categories.faqs.map((faq)=>(
                 <li>{faq.question}</li>

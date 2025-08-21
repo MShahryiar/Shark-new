@@ -1,27 +1,75 @@
-import React, {useState} from 'react'
-import { Plus } from 'lucide-react';
+import React, {useState, useEffect} from 'react'
+import { Plus,Minus } from 'lucide-react';
 import Question from './Question';
 
+import {motion, AnimatePresence} from "framer-motion"
 
-const FAQ = ({title, faqs}) => {
-    const [isOpen, setIsOpen] = useState(false)
+const FAQ = ({title, index, faqs, isOpen, onToggle}) => {
+  const [openQuestion, setOpenQuestion] = useState(null)
+
+  const toggleQuestion = (qIndex)=>{
+    setOpenQuestion(openQuestion === qIndex ? null:qIndex)
+  }
+
+   useEffect(()=>{
+      if(!isOpen){
+        setOpenQuestion(null)
+      }
+  },[isOpen])
+   
   return (
     <>
     <div>
 
-    <div className={`${isOpen ? "rounded-t-md":"rounded-md"} bg-primary h-18  items-center px-8 flex justify-between text-lg text-white md:text-xl`}
-        onClick={()=>setIsOpen(!isOpen)}
+    <div className={`${isOpen ? "rounded-t-md":"rounded-md"} cursor-pointer bg-primary h-18  items-center px-8 flex justify-between text-lg text-white md:text-xl`}
+        onClick={()=> onToggle(index)
+
+        }
         >
        <h2>{title}</h2>
-    <Plus className='text-white size-5'/>
-    </div>
-    {isOpen &&(
-        <div className='border -mt-5 flex flex-col gap-2  border-primary rounded-md p-5 pt-10'>
-            {faqs.map((faq)=>(
-                <Question question={faq.question} answer={faq.answer}/>
-            ))}
-        </div>
+    
+  <AnimatePresence mode="wait" initial={false}>
+    {isOpen ? (
+      <motion.div
+        key="minus"
+        initial={{ rotate: -90, opacity: 0 }}
+        animate={{ rotate: 0, opacity: 1 }}
+        exit={{ rotate: 90, opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <Minus className="text-white size-5" />
+      </motion.div>
+    ) : (
+      <motion.div
+        key="plus"
+        initial={{ rotate: 90, opacity: 0 }}
+        animate={{ rotate: 0, opacity: 1 }}
+        exit={{ rotate: -90, opacity: 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <Plus className="text-white size-5" />
+      </motion.div>
     )}
+  </AnimatePresence>
+    </div>
+
+    <AnimatePresence>
+    {isOpen  &&(
+
+        <motion.div 
+         key="faq-content"
+          initial={{ opacity: 0,}}
+      animate={{ opacity:1}}
+      // exit={{ opacity: 0, height: 0 }}
+        layout
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className='border -mt-5 flex flex-col gap-2  border-primary rounded-md p-5 pt-10'>
+            {faqs.map((faq,i)=>(
+              <Question question={faq.question} answer={faq.answer} index={i} isOpen={openQuestion === i} toggleQuestion={toggleQuestion}/>
+            ))}
+        </motion.div>
+    )}
+    </AnimatePresence>
     </div>
     </>
   )
