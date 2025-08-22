@@ -53,23 +53,7 @@ const ContactPage = () => {
                 <li className="whitespace-nowrap text-sm ">(905) 407-4275</li>
             </div>
               </div>
-                <div className="flex gap-3  justify-start      text-sm">
-              <a href="https://facebook.com/sharkimmigrationca"  className="border-1 p-1 bg-white text-primary duration-500 group hover:bg-red-500 hover:text-white text-white not:border-white  rounded-full p-1" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF className="  size-5 group-hover:text-white   " />
-              </a>
-                <a href="https://instagram.com/sharkimmigrationca"  className="border-1 p-1 bg-white text-primary duration-500 group hover:bg-red-500 hover:text-white text-white not:border-white  rounded-full p-1" >
-                <FaInstagram className="size-5    group-hover:text-white   " />
-              </a>
-                <a href="https://tiktok.com/@sharkimmigrationca"  className="border-1 p-1 bg-white text-primary duration-500 group hover:bg-red-500 hover:text-white text-white not:border-white  rounded-full p-1" >
-                <SiTiktok className=" size-5   group-hover:text-white   " />
-              </a>
-                <a href="https://youtube.com/@sharkimmigration.ca"  className="border-1 p-1 bg-white text-primary duration-500 group hover:bg-red-500 hover:text-white text-white not:border-white  rounded-full p-1" >
-                <FaYoutube className="size-5  group-hover:text-white   " />
-              </a>
-               <a href="https://x.com/sharkimmca"  className="border-1 p-1 bg-white text-primary duration-500 group hover:bg-red-500 hover:text-white text-white not:border-white  rounded-full p-1" >
-                <FaXTwitter className="size-5  group-hover:text-white   " />
-              </a>
-            </div>
+             
             </div>
             
           </div>
@@ -87,13 +71,116 @@ const ContactPage = () => {
       </div>
       <div className=" w-1/1 md:w-5/6 mx-auto">
 
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 max-md:divide-y-1 md:divide-x-1 divide-gray-200 gap-5">
             {/* left FORM */}
-            <form className="bg-red-200 h-[500px] col-span-2" >
-s
-            </form>
+           
+
+       <form className="h-fit grid col-span-2 grid-cols-1 md:grid-cols-2 gap-5 p-10 w-full">
+  {/* First row: First + Last name */}
+  <div className="flex flex-col gap-1">
+    <label htmlFor="fname" className="text-sm text-gray-600 font-bold">First Name</label>
+    <input type="text" id="fname" placeholder="First Name"
+      className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
+  </div>
+
+  <div className="flex flex-col gap-1">
+    <label htmlFor="lname" className="text-sm text-gray-600 font-bold">Last Name</label>
+    <input type="text" id="lname" placeholder="Last Name"
+      className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
+  </div>
+
+  {/* Second row: Email + Phone */}
+  <div className="flex flex-col gap-1">
+    <label htmlFor="email" className="text-sm text-gray-600 font-bold">Email</label>
+    <input type="text" id="email" placeholder="Email"
+      className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
+  </div>
+
+  <div className="flex flex-col gap-1">
+    <label htmlFor="phone" className="text-sm text-gray-600 font-bold">Phone</label>
+    <input type="text" id="phone" placeholder="Phone"
+      className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
+  </div>
+
+  {/* Full width fields */}
+  <div className="flex flex-col gap-1 col-span-1 md:col-span-2">
+    <label htmlFor="message" className="text-sm text-gray-600 font-bold">Message</label>
+    <textarea id="message" placeholder="Message"
+      className="indent-2 py-2 text-gray-700 border border-gray-500 rounded"></textarea>
+  </div>
+
+  <div className="flex flex-col gap-1 col-span-1 md:col-span-2">
+    <label htmlFor="immigration_goal" className="text-sm text-gray-600 font-bold">Immigration Goal</label>
+    <select id="immigration_goal"
+      className="indent-2 py-2 text-gray-700 border border-gray-500 rounded">
+      <option value="">-- Select your goal --</option>
+      <option value="express_entry">Express Entry (Skilled Worker)</option>
+      <option value="study_permit">Study Permit</option>
+      <option value="work_permit">Work Permit</option>
+      <option value="family_sponsorship">Family Sponsorship</option>
+      <option value="visitor_visa">Visitor Visa</option>
+      <option value="permanent_residence">Permanent Residence</option>
+      <option value="citizenship">Citizenship</option>
+      <option value="business_investor">Business / Investor Visa</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  {/* Submit button full width */}
+  <input type="submit" value="Send Message"
+    className="bg-primary text-white rounded col-span-1 md:col-span-2 py-5 text-lg cursor-pointer" />
+</form>
+       
             {/* Contact information */}
-            <div className="bg-green-200">d</div>
+            <div className="">
+              <h2 className="text-lg">Chat with us</h2>
+                <p className="text-md text-gray-700 ">We’re just a click away — reach out or follow us on our social channels.</p>
+               <div className="flex gap-1 mt-5 justify-start      text-sm">
+              <a href="https://facebook.com/sharkimmigrationca" target="_blank" rel="noopener noreferrer">
+                <FaFacebookF className="  size-4 text-gray-800   " />
+              </a>
+                <a href="https://instagram.com/sharkimmigrationca" >
+                <FaInstagram className="size-4 text-gray-800   " />
+              </a>
+                <a href="https://tiktok.com/@sharkimmigrationca" >
+                <SiTiktok className=" size-4 text-gray-800   " />
+              </a>
+                <a href="https://youtube.com/@sharkimmigration.ca" >
+                <FaYoutube className="size-4 text-gray-800   " />
+              </a>
+               <a href="https://x.com/sharkimmca" >
+                <FaXTwitter className="size-4 text-gray-800   " />
+              </a>
+            </div>
+
+            <h2 className="text-lg mt-10">Call Us</h2>
+            <p className="text-md text-gray-700 ">Have questions? Call us today and speak directly with our team.</p>
+
+            <div className="flex flex-col gap-2 mt-5">
+              <a href="tel:+19054074275" className="flex items-center gap-2 text-gray-800 hover:underline">
+                <Phone className="size-5" />
+                <span>(905) 407-4275</span>
+              </a>
+
+              <a href="tel:+19055819093" className="flex items-center gap-2 text-gray-800 hover:underline">
+                <Phone className="size-5" />
+                <span>(905) 581-9093</span>
+              </a>
+            </div>
+             <h2 className="text-lg mt-10">Visit Us</h2>
+            <p className="text-md text-gray-700 ">Visit us in person and start your journey with confidence</p>
+
+              <a
+                href="https://maps.app.goo.gl/L9JTYEZ2PkckP3xg6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-800 mt-5 hover:underline"
+              >
+                <MapPin className="size-5" />
+                <span>211 Watline Avenue, Mississauga</span>
+              </a>
+
+            </div>
           </div> 
 
         <div className='flex justify-center my-10 text-center items-center'>
