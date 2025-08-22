@@ -48,12 +48,12 @@ useEffect(() => {
                 <span className="text-black  group-hover:text-red-500">About</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-             <Link className="group inline-block relative cursor-pointer" to={"/Contact"}>
-                <span className="text-black group-hover:text-red-500">Contact</span>
-                <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
              <Link className="group inline-block relative cursor-pointer" to={"/Services"}>
                 <span className="text-black group-hover:text-red-500">Services</span>
+                <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+             <Link className="group inline-block relative cursor-pointer" to={"/Contact"}>
+                <span className="text-black group-hover:text-red-500">Contact</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </ul>
@@ -80,12 +80,12 @@ useEffect(() => {
                 <span className="text-black  group-hover:text-red-500">About</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-             <Link className="text-xl group inline-block relative cursor-pointer" to={"/Contact"}>
-                <span className="text-black group-hover:text-red-500">Contact</span>
-                <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
 <Link className="text-xl group inline-block relative cursor-pointer" to={"/Services"}>
                 <span className="text-black group-hover:text-red-500">Services</span>
+                <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+             <Link className="text-xl group inline-block relative cursor-pointer" to={"/Contact"}>
+                <span className="text-black group-hover:text-red-500">Contact</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </ul>
@@ -145,21 +145,30 @@ useEffect(() => {
 
             <div>
                       <div className='flex flex-col  p-3 gap-2 mt-2'>
-            <div className=' list-none flex gap-2 group-hover:text-red-500 '>
-                <MapPin  className="h-4 w-4 group"/>
-                <li className='text-xs  group '>211 Watline Avenue Mississauga, ON</li>
-            </div>
-            <div className=' list-none flex gap-2 group '>
-                <Mail  className="h-4 w-4 group"/>
-                <li className='text-xs  '>info@shark-immigration.ca</li>
-            </div>
-             <div className=' list-none flex gap-2 group '>
+           <a
+  href="https://maps.app.goo.gl/L9JTYEZ2PkckP3xg6"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex gap-2 items-center text-xs group hover:text-red-500"
+>
+  <MapPin className="h-4 w-4" />
+  <span>211 Watline Avenue Mississauga, ON</span>
+</a>
+
+<a
+  href="mailto:info@shark-immigration.ca"
+  className="flex gap-2 items-center text-xs group hover:text-red-500"
+>
+  <Mail className="h-4 w-4" />
+  <span>info@shark-immigration.ca</span>
+</a>
+             <div className=' flex gap-2 items-center text-xs group hover:text-red-500'>
                 <Clock  className="h-4 w-4 group"/>
-                <li className='text-xs  '>Mon-Fri 0900-18:00</li>
+                <li className='text-xs list-none '>Mon-Fri 0900-18:00</li>
             </div>
              
         </div>
-                    <div className="flex gap-3 mt-5 w-4/6 mx-auto justify-between text-xl text-red-500">
+                    <div className="flex mt-5 w-4/6 mx-auto justify-between text-xl text-red-500">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF className="hover:text-blue-950 transition-colors duration-500" />
               </a>

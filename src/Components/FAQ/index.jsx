@@ -21,7 +21,7 @@ const FAQ = ({title, index, faqs, isOpen, onToggle}) => {
     <>
     <div>
 
-    <div className={`${isOpen ? "rounded-t-md":"rounded-md"} cursor-pointer bg-primary h-18  items-center px-8 flex justify-between text-lg text-white md:text-xl`}
+    <div className={`${isOpen ? "rounded-t-md":"rounded-md"} cursor-pointer bg-primary h-14  items-center px-8 flex justify-between text-lg text-white md:text-xl`}
         onClick={()=> onToggle(index)
 
         }
