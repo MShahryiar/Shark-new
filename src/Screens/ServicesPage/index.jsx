@@ -13,7 +13,7 @@ const ServicesPage = () => {
         <div className='flex justify-center mt-10 text-center items-center'>
           <div>
             <h2 className='font-medium text-secondary max-md:text-sm text-md mb-3 uppercase'>Services we offer</h2>
-            <h1 className='text-primary text-xl md:text-3xl max-w-3xl text-center text-center font-bold capitalize mb-5'>Comprehensive Canadian Immigration Services Tailored to Your Journey for a Smooth and Successful Move to Canada.</h1>
+            <h1 className='text-primary text-xl md:text-2xl  max-w-3xl text-center text-center font-medium capitalize mb-5'>Comprehensive Canadian Immigration Services Tailored to Your Journey for a Smooth and Successful Move to Canada.</h1>
           </div>
            
 

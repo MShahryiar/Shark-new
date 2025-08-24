@@ -16,8 +16,8 @@ const Homepage = () => {
     <>
       <SocialNav/>
       <Navbar/>
-      {/* <Carousel/> */}
-      <Banner/>
+      <Carousel/>
+      {/* <Banner/> */}
       <About/>
       <Services/>
       <ServicesTwo/>

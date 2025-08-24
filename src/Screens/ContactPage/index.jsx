@@ -62,14 +62,14 @@ const ContactPage = () => {
 
 
        <div className="w-5/6 mx-auto my-10  ">
-       <div className='flex justify-center text-center items-center'>
+       <div className='flex justify-center my-10 text-center items-center'>
           <div>
             <h2 className='font-medium text-secondary max-md:text-sm text-md mb-3 uppercase'>Contact Our Team</h2>
-            <h1 className='text-primary text-xl md:text-3xl max-w-3xl text-center text-center font-bold capitalize mb-5'>Get in touch with our support team for quick assistance, personalized solutions, and expert guidance tailored to your needs.</h1>
+            <h1 className='text-primary text-xl md:text-2xl max-w-3xl text-center text-center font-medium capitalize mb-5'>Get in touch with our support team for quick assistance, personalized solutions, and expert guidance tailored to your needs.</h1>
           </div>
 
       </div>
-      <div className=" w-1/1 md:w-5/6 mx-auto">
+      <div className=" ">
 
           <div className="grid grid-cols-1 md:grid-cols-3 max-md:divide-y-1 md:divide-x-1 divide-gray-200 gap-5">
             {/* left FORM */}
@@ -183,7 +183,7 @@ const ContactPage = () => {
             </div>
           </div> 
 
-        <div className='flex justify-center my-10 text-center items-center'>
+        <div className='flex justify-center my-20 text-center items-center'>
           <div>
             <h2 className='font-medium text-secondary max-md:text-sm text-md mb-3 uppercase'>FAQs</h2>
             <h1 className='text-primary text-xl md:text-3xl max-w-3xl text-center text-center font-bold capitalize mb-5'>Got Questions? We’ve Got You Covered</h1>
