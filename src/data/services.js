@@ -10,7 +10,7 @@ export const services = [
     {
       type: "imageSection",
       heading: "Sponsor Spouse or Partner Canada",
-      image: "/images/spousal-sponsorship.jpg",
+      image: "/images/slider01.jpg",
       content: [
         {
           type: "paragraph",

@@ -11,8 +11,9 @@ import CTA from "../../Components/CTA"
 import FAQData from "../../data/faqs.js"
 import FAQ from "../../Components/FAQ";
 import { useState } from "react";
-
+import ScrollTop from "../../Utils/ScrollTop.js";
 const ContactPage = () => {
+  
   const [openCategory, setOpenCategory] = useState(null)
 
   const toggleCategory = (index)=>{
@@ -20,6 +21,7 @@ const ContactPage = () => {
   }
   return (
     <div>
+      <ScrollTop/>
       <SocialNav/>
       <Navbar/>
 
@@ -75,7 +77,7 @@ const ContactPage = () => {
             {/* left FORM */}
            
 
-       <form className="h-fit grid col-span-2 grid-cols-1 md:grid-cols-2 gap-5 p-10 w-full">
+       <form className="h-fit  grid col-span-2 grid-cols-1 md:grid-cols-2 gap-5 p-10 w-full">
   {/* First row: First + Last name */}
   <div className="flex flex-col gap-1">
     <label htmlFor="fname" className="text-sm text-gray-600 font-bold">First Name</label>
@@ -177,7 +179,7 @@ const ContactPage = () => {
                 className="flex items-center gap-2 text-gray-800 mt-5 hover:underline"
               >
                 <MapPin className="size-5" />
-                <span>211 Watline Avenue, Mississauga</span>
+                <span>Mississauga | Winnipeg | Calgary</span>
               </a>
 
             </div>
@@ -191,7 +193,7 @@ const ContactPage = () => {
 
 
       </div>
-      <div className="flex flex-col gap-2 ">
+      <div className="flex flex-col  gap-2 ">
 
           {FAQData.map((cat, i)=>(
             <>

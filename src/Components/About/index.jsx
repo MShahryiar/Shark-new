@@ -1,14 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {motion} from "framer-motion"
 import { BadgeCheck, MoveRight } from 'lucide-react';
+import {useNavigate} from "react-router-dom"
 
 const About = () => {
+  const navigate = useNavigate()
+  useEffect(() => {
+  const img = new Image();
+  img.src = "./images/ServiceBg.jpg";
+}, []);
   return (
       <div className='min-h-screen justify-evenly mx-auto md:p-20  flex md:flex-row flex-col-reverse '>
 
           <div className='w-1/1  mx-auto p-10 flex-1 flex flex-col justify-center  items-center md:items-start'>
           <h2 className='font-medium text-secondary text-md mb-3 uppercase'>About the company</h2>
-            <h2 className='text-primary text-3xl text-center md:text-left font-bold capitalize mb-5'>Your trusted experts in Canadian immigration consulting.</h2>
+            <h2 className='text-primary text-3xl text-center md:text-left font-medium capitalize mb-5'>Your trusted experts in Canadian immigration consulting.</h2>
             <motion.p 
       initial={{opacity:0, x:-20}}
       whileInView={{opacity:1, x:0}}
@@ -40,25 +46,28 @@ Our mission is to open doors to Canada through trusted guidance, proven strategi
             className='group rounded-md flex gap-5 whitespace-nowrap my-10 
             cursor-pointer px-5 py-3 
             bg-primary text-white duration-500 
-            hover:border-transparent hover:-translate-y-2'> Book Your Free Consultation </motion.button>
+            hover:border-transparent hover:-translate-y-2'
+            onClick={()=>navigate("/contact")}
+            > Book Your Free Consultation </motion.button>
 
             
           </div>
-          <div className='flex-1 grid grid-cols-1 md:grid-cols-2 gap-2 p-10  md:gap-5'>
+          <div className='flex-1 grid grid-cols-1 gap-2 p-10  md:gap-5'>
             <div className=' flex  max-md:h-fit '>
                 <motion.img 
-                     initial={{ scale: 0, opacity: 0, translateZ: -300 }}
-      whileInView={{ scale: 1, opacity: 1, translateZ: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-                src="./images/ServiceBg.jpg" className='h-3/6 rounded-md object-cover md:self-baseline md:mt-40'/>
+                     initial={{ opacity: 0, x: 100 }}
+  whileInView={{ opacity: 1, x:0 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  loading='lazy'
+                src="./images/ServiceBg.jpg" className='w-full h-[400px] object-cover rounded-md'/>
             </div>
-            <div className=' flex max-md:h-fit'>
+            {/* <div className=' flex max-md:h-fit'>
                <motion.img 
                  initial={{ scale: 0, opacity: 0, translateZ: -300 }}
       whileInView={{ scale: 1, opacity: 1, translateZ: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
                src="./images/ServiceBg.jpg" className='h-3/6 rounded-md object-cover md:self-end md:mb-20'/>
-            </div>
+            </div> */}
           </div>
       </div>
   )

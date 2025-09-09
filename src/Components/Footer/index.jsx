@@ -1,41 +1,20 @@
 import React from 'react';
 import { MoveRight, MapPinned, Phone, Clock, Mail } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import { SiTiktok } from "react-icons/si";
-import { FaXTwitter } from "react-icons/fa6";
+import SocialIcons from "../SocialIcons"
 import Logo from "../../../public/images/Logo.png"
 
 
 const Footer = () => {
   return (
     <div className="bg-gray-50  p-5 md:p-10 ">
-      <div className=" mx-auto w-5/6 grid grid-cols-1 md:grid-cols-4 gap-10  mx-auto text-gray-200">
+      <div className=" mx-auto w-5/6 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-4 gap-10  mx-auto text-gray-200">
         
-        {/* Logo & Motto */}
         <div className=" flex flex-col   md:items-end   md:text-left gap-4">
           <div className='flex flex-col gap-4 items-center md:items-start'>
 
           <img src={Logo} className="w-40 -mt-2"  alt="Shark logo" />
           <p className='text-sm font-light text-gray-500 text-center md:text-left'>Shark Immigration Solutions — Dedicated to making your Canadian dream a reality with expert guidance, personalized support, and a smooth immigration process from start to finish.</p>
-          {/* <p>Pioneering trusted immigration services since 2015. With over a decade of excellence, we’ve expanded to three offices worldwide, dedicated to helping clients achieve their Canadian immigration dreams.</p> */}
-          {/* <p className="text-sm text-blue-400 md:max-w-[150px] ">CAN DO, WILL DO, HAPPY TO.</p> */}
-               <div className="flex gap-3 justify-start      text-sm">
-  <a href="https://facebook.com/sharkimmigrationca"  className="border-1 p-1  group hover:bg-red-500 hover:text-white text-primary hover:border-white not:border-primary  rounded-full p-1"target="_blank" rel="noopener noreferrer">
-    <FaFacebookF className="  size-3 group-hover:text-white transition-colors duration-300 " />
-  </a>
-    <a href="https://instagram.com/sharkimmigrationca"  className="border-1 p-1 group hover:bg-red-500 hover:text-white text-primary hover:border-white not:border-primary  rounded-full p-1" target="_blank" rel="noopener noreferrer">
-    <FaInstagram className="size-3    group-hover:text-white transition-colors duration-300 " />
-  </a>
-    <a href="https://tiktok.com/@sharkimmigrationca"  className="border-1 p-1 group hover:bg-red-500 hover:text-white text-primary hover:border-white not:border-primary  rounded-full p-1"target="_blank" rel="noopener noreferrer">
-    <SiTiktok className=" size-3   group-hover:text-white transition-colors duration-300 " />
-  </a>
-    <a href="https://youtube.com/@sharkimmigration.ca"  className="border-1 p-1 group hover:bg-red-500 hover:text-white text-primary hover:border-white not:border-primary  rounded-full p-1" target="_blank" rel="noopener noreferrer">
-    <FaYoutube className="size-3  group-hover:text-white transition-colors duration-300 " />
-  </a>
-   <a href="https://x.com/sharkimmca"  className="border-1 p-1 group hover:bg-red-500 hover:text-white text-primary hover:border-white not:border-primary  rounded-full p-1" target="_blank" rel="noopener noreferrer">
-    <FaXTwitter className="size-3  group-hover:text-white transition-colors duration-300 " />
-  </a>
-</div>
+            <SocialIcons size={3}/>
           </div>
         </div>
        
@@ -93,9 +72,9 @@ const Footer = () => {
           <ul className="flex flex-col gap-4 text-primary">
             <li className="flex flex-row text-left  justify-center md:justify-start items-center gap-3 group font-light text-sm ">
               <MapPinned className="mt-1 size-5 group-hover:text-red-500 group-hover:translate-x-1 transition-all" />
-              <div className="flex flex-col  whitespace-nowrap text-sm p hover:underline">
-                <span className=''>211 Watline Avenue, Mississauga</span>
-                <span>47 Burning Glass RD, Winnipeg</span>
+              <div className="flex flex-col text-sm p hover:underline">
+                <span className=''>#1. 211 Watline Avenue, Mississauga</span>
+                <span>#2. 47 Burning Glass RD, Winnipeg</span>
               </div>
             </li>
 

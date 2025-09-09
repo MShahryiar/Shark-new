@@ -7,6 +7,7 @@ import ServicesPage from "./Screens/ServicesPage"
 import ErrorPage from "./Screens/ErrorPage"
 import ContactPage from "./Screens/ContactPage"
 import About from "./Screens/AboutPage"
+import ThankYou from "./Components/ThankYou"
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<ContactPage/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/services/:id" element={<DetailedService />} />
+        <Route path="/thank" element={<ThankYou/>}/>
         <Route path="*" element={<ErrorPage/>}/>
 
         

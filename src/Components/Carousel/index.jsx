@@ -170,7 +170,7 @@ export const Carousel = () => {
           animate={{ y: 0, opacity: 1 }}
           // exit={{ y: -40, opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="uppercase text-white text-center font-bold max-w-3xl p-2 z-10 mt-16 text-3xl md:text-5xl"
+          className="uppercase text-white text-center font-bold  max-w-sm md:max-w-3xl p-2 z-10 mt-16 text-3xl md:text-4xl"
         >
           {SliderData[currentSlide].headline}
         </motion.h1>
@@ -184,7 +184,7 @@ export const Carousel = () => {
           animate={{ opacity: 1, x: 0 }}
           // exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4}}
-          className="text-white text-xl md:text-2xl p-2 z-10"
+          className="text-white text-lg max-md:max-w-2xs text-center md:text-xl p-2 z-10"
         >
           {SliderData[currentSlide].subtext}
         </motion.h2>
@@ -210,13 +210,13 @@ export const Carousel = () => {
 
       {/* Navigation Arrows */}
       <button
-        className="absolute top-1/2 left-5 p-2 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500"
+        className="absolute top-1/2 left-5 p-2 z-100 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500"
         onClick={prevSlide}
       >
         <ChevronLeft className="text-white h-8 w-8" />
       </button>
       <button
-        className="absolute top-1/2 right-5 p-2 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500"
+        className="absolute top-1/2 right-5 p-2 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500 z-100"
         onClick={nextSlide}
       >
         <ChevronRight className="text-white h-8 w-8" />

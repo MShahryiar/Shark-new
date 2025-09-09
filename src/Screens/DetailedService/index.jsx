@@ -6,6 +6,7 @@ import {services} from "../../data/services.js"
 import { ChevronRight } from 'lucide-react';
 
 import Footer from "../../Components/Footer"
+import ScrollTop from "../../Utils/ScrollTop.js";
 
 
 const DetailedService = () => {
@@ -14,13 +15,14 @@ const DetailedService = () => {
 
     if (!service) return <h2>Service not found</h2>;
 
-    console.log(service)
+    // console.log(service)
   return (
     <>
+        <ScrollTop/>
         <SocialNav/>
         <Navbar/>
      
-         <div className="pt-28 ">
+         <div className=" ">
             <div className=" relative h-92  w-full flex justify-center items-center ">
               <img src={"/images/serviceBanner2.jpg"} className="absolute top-0 left-0 h-full w-full opacity-60 blur-xs -z-10 object-cover"/>
                 <div className="flex flex-col items-center">
@@ -30,7 +32,7 @@ const DetailedService = () => {
                     <ChevronRight className=" size-5 text-secondary stroke-3"/>
                     <Link to="/services" className="text-white text-shadow-lg/30 font-medium  ">Services</Link>
                     <ChevronRight className="text-secondary size-5 stroke-3"/>
-                    <span className="text-white font-medium  text-shadow-lg/30">{service.name}</span>
+                    <span className="text-white font-medium hover:underline  text-shadow-lg/30">{service.name}</span>
                  </div>
                 </div>
 
