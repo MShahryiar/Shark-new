@@ -5,10 +5,19 @@ import Footer from '../../Components/Footer'
 import { services } from '../../data/services.js'
 import Service from '../../Components/Services/Service.jsx'
 import ScrollTop from '../../Utils/ScrollTop.js'
+import { Helmet } from 'react-helmet'
 
 const ServicesPage = () => {
   return (
     <div>
+      <Helmet>
+        <title>Our Services | Shark Immigration Solutions</title>
+        <meta
+          name="description"
+          content="Explore our range of Canadian immigration services including Express Entry, study permits, family sponsorship, and more. Let us help you achieve your Canadian dream."
+        />
+        <meta name="keywords" content="Express Entry, study permit, work visa, Canada immigration services" />
+      </Helmet>
       <ScrollTop/>
       <SocialNav/>
       <Navbar/>

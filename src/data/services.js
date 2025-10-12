@@ -1,6 +1,284 @@
 import {ShieldUser, BookOpenText,UserStar,UserRoundX, FastForward, PersonStanding, HousePlus, House, BriefcaseBusiness, Briefcase, FileUser, ClipboardClock, AudioWaveform, Sticker, BookUser  } from "lucide-react"
 
 export const services = [
+      {
+        id:"deportation-from-canada",
+        name:"Deportation From Canada",
+        Icon:UserRoundX ,
+        brief:"Facing removal from Canada can be stressful. We provide guidance and representation to help you understand your rights, explore appeal options, and work toward stopping or delaying deportation.",
+        "sections": [
+    {
+      "type": "singleColumn",
+      "heading": "Stop Deportation From Canada Legal Help",
+      "image": "",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you are facing the serious risk of deportation from Canada, immediate action is crucial. Being at risk of deportation can be stressful and overwhelming, but with the right legal help, you may be able to stop the process and remain in Canada. Deportation is a legal process that can happen if the Canadian authorities believe you are not eligible to stay in the country. Whether you’ve received a notice from the Canada Border Services Agency (CBSA) or are already in a meeting about your deportation, it’s vital to contact an immigration consultant as soon as possible. Your counsel will work on your behalf, helping to stop your deportation and present the best possible case to defend your right to stay in Canada. Acting quickly can make a significant difference in the outcome of your case, ensuring that you don’t miss any critical deadlines or opportunities for defense. Your counsel can guide you through every step of the process and help secure the best possible chance of success."
+        },
+      ]
+    },
+    {
+      "type": "singleColumn",
+      "heading": "Key Strategies to Stop Deportation",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "There are two main strategies to consider when working to stop deportation:"
+        },
+        {
+          "type": "heading",
+          "text": "Requesting a Deportation Deferral:"
+        },
+        {
+          "type": "paragraph",
+          "text": "One option is to ask CBSA to defer the deportation. This request requires providing strong, valid reasons why your removal should be postponed. For example, if you are pregnant and due to give birth soon, or if you have a Humanitarian and Compassionate (H&C) grounds application that is still being processed, you can use these as grounds for deferral. You must show that postponing your deportation will prevent harm or injustice."
+        },
+        {
+          "type": "heading",
+          "text": "Seeking a Federal Court Stay of Removal:"
+        },
+        {
+          "type": "paragraph",
+          "text": "If deferral is not an option, you may be able to seek a stay of removal through Federal Court. This legal process involves asking a judge to temporarily halt your deportation. To succeed in this request, you must demonstrate that deportation would result in significant, irreparable harm to you or your family. It could be due to health issues, the risk of persecution, or other critical factors."
+        },
+        
+        {
+          "type": "paragraph",
+          "text": "While there is no guarantee that either option will succeed, each case is unique, and many individuals have successfully stopped their deportation with the right legal support."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you are facing the threat of deportation, do not wait. Contact an immigration consultant to explore your options and start building your defense today. The sooner you act, the more time your . Your lawyer/immigration consultant will have to create the best possible defense for your case."
+        },
+      ]
+    },
+  ]
+    },
+        {
+        id:"humanitarian-application",
+        name:"Humanitarian Application",
+          Icon:PersonStanding ,
+        brief:"For individuals facing exceptional hardship if required to leave Canada. We assist in preparing strong applications that highlight compassionate grounds, aiming to secure your right to stay.",
+        "sections": [
+    {
+      "type": "singleColumn",
+      "heading": "Apply for Humanitarian Grounds Application",
+      "image": "",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Humanitarian and Compassionate Grounds Application Process offers individuals an opportunity to apply for permanent residency in Canada under exceptional circumstances. This process is specifically designed for those who do not qualify through regular immigration streams but can demonstrate significant ties to Canada and would face substantial hardship if required to leave."
+        },
+        {
+          "type": "paragraph",
+          "text": "Applicants may strengthen their case by showing how they have established themselves in Canada, including:"
+        },
+        {
+            "type":"list",
+            "items":[
+                "Building strong family connections with Canadian citizens or permanent residents.",
+                "Contributing to the workforce, even without a valid work permit.",
+                "Pursuing education without a proper study permit.",
+                "Participating in volunteer activities within their communities.",
+                "Developing proficiency in English or French.",
+                "Acquiring property or maintaining savings in Canada.",
+                "Establishing meaningful social relationships."
+            ]
+        }
+      ]
+    },
+    {
+      "type": "singleColumn",
+      "heading": "",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A well-prepared application should include a strong submission letter and persuasive documentation that highlights the applicant’s integration into Canadian society and the hardships they would face outside Canada. This approach ensures the best chance of success when applying for this unique pathway."
+        },
+        
+      ]
+    },
+    
+  ]
+    },
+        {
+        id:"immigration-appeals",
+        name:"Immigration Appeals",
+          Icon:ClipboardClock ,
+        brief:"Challenging a refused immigration application or removal order? We provide expert guidance and representation to present a strong case before the Immigration Appeal Division.",
+        "sections": [
+    {
+      "type": "singleColumn",
+      "heading": "Immigration Appeal Division Canada Services",
+      "image": "",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Shark Immigration Solutions specializes in handling immigration appeals, providing comprehensive support for clients navigating complex immigration challenges. Our Immigration Appeal Division Services focus on thoroughly reviewing cases and ensuring fair decisions are made. When managing appeal cases, we ensure all necessary evidence is presented to the appeal tribunal, prioritize timely disclosure to the Immigration and Refugee Board (IRB), and prepare you thoroughly for the hearing. Additionally, we ensure that relevant witnesses are called to testify in support of the appellant’s case. To appeal successfully, you must show that the decision by CIC, CBSA, or ID was legally or factually incorrect. The Immigration Appeal Division (IAD) may also consider humanitarian reasons. Legal counsel plays a vital role in arguing for your appeal."
+        },
+        
+      ]
+    },
+    {
+      "type": "singleColumn",
+      "heading": "Sponsorship Appeal Process",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you are a Canadian citizen or permanent resident and your sponsorship application to bring a close family member to Canada has been refused by Citizenship and Immigration Canada (CIC), you have the right to appeal the decision to the Immigration Appeal Division Canada Services provided by the Immigration and Refugee Board of Canada (IRB). You must file your appeal within 30 days of the refusal. In certain situations, the appeal process may involve an informal procedure called alternative dispute resolution (ADR). However, in most cases, a formal hearing will be held to review the appeal."
+        },
+        
+      ]
+    },
+    {
+      "type": "singleColumn",
+      "heading": "Residency Obligation Appeal",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you are a permanent resident living outside Canada and Citizenship and Immigration Canada (CIC) determines that you have failed to meet the residency requirement, you could lose your permanent resident status. To maintain permanent residency, you must be physically present in Canada for at least 730 days within every five-year period. If CIC decides to revoke your permanent resident status, you have the right to appeal the decision through Immigration Appeals in Canada services."
+        }
+      ]
+    },
+     {
+      "type": "singleColumn",
+      "heading": "Appeal of Removal Order",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "If you are a permanent resident, refugee, or foreign national with permanent residence in Canada and have received a removal order, you have the right to appeal the decision to Citizenship and Immigration Canada (CIC). A successful appeal through Canada Immigration Appeal Services will allow you to stay in Canada, whereas if the appeal is denied, the Canada Border Services Agency (CBSA) may proceed with your removal from the country."
+        }
+      ]
+    }
+  ]
+    },
+        {
+        id:"pre-removal-risk-assessment",
+        name:"Pre Removal Risk Assessment (PRRA)",
+          Icon:BookUser ,
+        brief:"For individuals facing deportation, this process evaluates the risks they may face if returned to their home country. We assist in building a strong case to protect your safety and future in Canada.",
+         "sections": [
+    {
+      "type": "singleColumn",
+      "heading": "Eligibility for pre-removal risks application",
+      "image": "",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "The Pre-removal Risks Application Process (PRRA) provides individuals facing removal from Canada an opportunity to present their case if they believe returning to their country poses serious risks. This process evaluates potential dangers such as torture, persecution, or threats to life, ensuring protection for those in vulnerable situations."
+        },
+        {
+          "type": "paragraph",
+          "text ": "Eligibility for pre-removal risks application requires individuals to meet specific conditions. Those ineligible for refugee protection under certain sections of the Immigration and Refugee Protection Act (IRPA) can still submit a PRRA application, provided they have sufficient evidence to support their claims. Applicants must highlight new risks or significant changes in their circumstances since their previous claim."
+        }
+      ]
+    },
+    {
+      "type": "singleColumn",
+      "heading": "The process involves",
+      "content": [
+       
+        {
+          "type": "heading",
+          "text": "Filing the PRRA Application:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Applicants are typically served with a PRRA notification. To proceed, they must complete the required forms and submit all supporting documentation."
+        },
+        {
+          "type": "heading",
+          "text": "Submitting Evidence: "
+        },
+        {
+          "type": "paragraph",
+          "text": "Applicants must provide comprehensive evidence detailing the risks they face if removed to their country of origin. This includes proof of changed circumstances or new threats that have emerged since any prior claims."
+        },
+        {
+          "type": "heading",
+          "text": "Review and Decision:     "
+        },
+        {
+          "type": "paragraph",
+          "text": "Immigration officials evaluate the submitted evidence, considering the applicant’s risk of harm in their home country."
+        },
+        
+        {
+          "type": "paragraph",
+          "text": "Those pursuing a PRRA must carefully prepare their application to present a strong case. It is essential to address the criteria outlined under the IRPA and demonstrate why returning to their country would jeopardize their safety."
+        },
+        
+      ]
+    },
+    
+  ]
+    },
+        {
+        id:"admissibility-hearing",
+        name:"Admissibility Hearing",
+          Icon:AudioWaveform ,
+        brief:"A legal process to determine if you can enter or remain in Canada. We prepare your case, represent you before the Immigration and Refugee Board, and work to protect your status.",
+        "sections": [
+    {
+      "type": "singleColumn",
+      "heading": "Canada Admissibility Hearings",
+      "image": "",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "An Admissibility Hearing plays a critical role in determining an individual’s ability to enter or stay in Canada. The Immigration and Refugee Board of Canada (IRB) conducts these hearings to assess if a foreign national or permanent resident is in compliance with Canada’s immigration laws. These hearings help ensure that only individuals who meet the legal requirements for residency, employment, or entry are allowed to remain in or enter the country. If an individual is found to be inadmissible, they may be subject to a removal order, which means they will be asked to leave Canada. However, in certain situations, individuals may have the right to challenge this decision or request a judicial review."
+        },
+      ]
+    },
+    {
+      "type": "singleColumn",
+      "heading": "What Triggers an Admissibility Hearing?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "An admissibility hearing can be triggered for various reasons, such as:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Criminal Convictions: Either within Canada or abroad.",
+            "Involvement in Criminal Organizations: Evidence of membership in such groups can lead to an inadmissibility hearing.",
+            "Human Rights Violations: Allegations related to violations of human rights or international law.",
+            "Misrepresentation: Providing false information in your immigration application or proceedings.",
+            "Non-Compliance: Failing to adhere to the Immigration and Refugee Protection Act (IRPA)."
+          ]
+        },
+        
+        {
+          "type": "heading",
+          "text": "The Process of an Admissibility Hearing"
+        },
+        {
+          "type": "paragraph",
+          "text": "Admissibility hearings take place at the Immigration Division of the Immigration and Refugee Board of Canada (IRB). During the hearing, a decision-maker will assess the case and determine if you are inadmissible. If you are found inadmissible, a removal order may be issued, requiring you to leave Canada."
+        },
+        {
+          "type": "paragraph",
+          "text": "In some cases, foreign nationals or permanent residents may be eligible to appeal the decision to the Immigration Appeal Division (IAD). However, if you are not eligible for an appeal, you can request a judicial review of the Immigration Division’s decision in court."
+        },
+        {
+          "type": "heading",
+          "text": "Why You Need Legal Assistance"
+        },
+        {
+          "type": "paragraph",
+          "text": "Given the legal complexities surrounding admissibility hearings, it is highly recommended to seek expert legal guidance. A qualified Canada Admissibility Hearings Lawyer can help navigate the process, build your case, and represent you during the hearing to ensure your rights are protected."
+        },
+        {
+          "type": "paragraph",
+          "text": "Moving onward, anywhere you see Immigration Consultant, and Lawyer always use immigration counsel, expert legal assistance can significantly improve your chances of a favorable outcome in your admissibility hearing."
+        }
+      ]
+    },
+    
+  ]
+    },
     {
         id:"canada-immigration-sponsorship-process",
         name:"Canada Immigration Sponsorship Process",
@@ -8,7 +286,7 @@ export const services = [
         Icon:ShieldUser,
    sections: [
     {
-      type: "imageSection",
+      type: "singleColumn",
       heading: "Sponsor Spouse or Partner Canada",
       image: "/images/slider01.jpg",
       content: [
@@ -79,7 +357,7 @@ export const services = [
         brief:"Studying in Canada offers the unique advantage of working while studying and after graduation, providing valuable work experience and the opportunity to stay and grow in one of the world’s most welcoming countries.",
         sections: [
     {
-      type: "imageSection",
+      type: "singleColumn",
       heading: "Work while studying in Canada",
       image: "/images/spousal-sponsorship.jpg",
       content: [
@@ -149,7 +427,7 @@ export const services = [
         brief:"Become a proud citizen of Canada and enjoy the full rights and privileges it offers. We assist you through the application process, from meeting residency requirements to preparing for the citizenship test and interview.",
           sections: [
     {
-      type: "imageSection",
+      type: "singleColumn",
       heading: "Eligibility for Canadian citizenship",
       image: "/images/spousal-sponsorship.jpg",
       content: [
@@ -232,60 +510,7 @@ export const services = [
     }
   ]
     },
-    {
-        id:"deportation-from-canada",
-        name:"Deportation From Canada",
-        Icon:UserRoundX ,
-        brief:"Facing removal from Canada can be stressful. We provide guidance and representation to help you understand your rights, explore appeal options, and work toward stopping or delaying deportation.",
-        "sections": [
-    {
-      "type": "imageSection",
-      "heading": "Stop Deportation From Canada Legal Help",
-      "image": "",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "If you are facing the serious risk of deportation from Canada, immediate action is crucial. Being at risk of deportation can be stressful and overwhelming, but with the right legal help, you may be able to stop the process and remain in Canada. Deportation is a legal process that can happen if the Canadian authorities believe you are not eligible to stay in the country. Whether you’ve received a notice from the Canada Border Services Agency (CBSA) or are already in a meeting about your deportation, it’s vital to contact an immigration consultant as soon as possible. Your counsel will work on your behalf, helping to stop your deportation and present the best possible case to defend your right to stay in Canada. Acting quickly can make a significant difference in the outcome of your case, ensuring that you don’t miss any critical deadlines or opportunities for defense. Your counsel can guide you through every step of the process and help secure the best possible chance of success."
-        },
-      ]
-    },
-    {
-      "type": "singleColumn",
-      "heading": "Key Strategies to Stop Deportation",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "There are two main strategies to consider when working to stop deportation:"
-        },
-        {
-          "type": "heading",
-          "text": "Requesting a Deportation Deferral:"
-        },
-        {
-          "type": "paragraph",
-          "text": "One option is to ask CBSA to defer the deportation. This request requires providing strong, valid reasons why your removal should be postponed. For example, if you are pregnant and due to give birth soon, or if you have a Humanitarian and Compassionate (H&C) grounds application that is still being processed, you can use these as grounds for deferral. You must show that postponing your deportation will prevent harm or injustice."
-        },
-        {
-          "type": "heading",
-          "text": "Seeking a Federal Court Stay of Removal:"
-        },
-        {
-          "type": "paragraph",
-          "text": "If deferral is not an option, you may be able to seek a stay of removal through Federal Court. This legal process involves asking a judge to temporarily halt your deportation. To succeed in this request, you must demonstrate that deportation would result in significant, irreparable harm to you or your family. It could be due to health issues, the risk of persecution, or other critical factors."
-        },
-        
-        {
-          "type": "paragraph",
-          "text": "While there is no guarantee that either option will succeed, each case is unique, and many individuals have successfully stopped their deportation with the right legal support."
-        },
-        {
-          "type": "paragraph",
-          "text": "If you are facing the threat of deportation, do not wait. Contact an immigration consultant to explore your options and start building your defense today. The sooner you act, the more time your . Your lawyer/immigration consultant will have to create the best possible defense for your case."
-        },
-      ]
-    },
-  ]
-    },
+
     {
         id:"express-entry",
         name:"Express Entry",
@@ -293,7 +518,7 @@ export const services = [
         brief:"A fast-track pathway for skilled workers to become permanent residents of Canada. We help you create a strong profile, improve your CRS score, and navigate every step of the application process.",
         "sections": [
     {
-      "type": "imageSection",
+      "type": "singleColumn",
       "heading": "Canadian Express Entry Application Process",
       "image": "",
       "content": [
@@ -342,53 +567,7 @@ export const services = [
    
   ]
     },
-    {
-        id:"humanitarian-application",
-        name:"Humanitarian Application",
-          Icon:PersonStanding ,
-        brief:"For individuals facing exceptional hardship if required to leave Canada. We assist in preparing strong applications that highlight compassionate grounds, aiming to secure your right to stay.",
-        "sections": [
-    {
-      "type": "imageSection",
-      "heading": "Apply for Humanitarian Grounds Application",
-      "image": "",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The Humanitarian and Compassionate Grounds Application Process offers individuals an opportunity to apply for permanent residency in Canada under exceptional circumstances. This process is specifically designed for those who do not qualify through regular immigration streams but can demonstrate significant ties to Canada and would face substantial hardship if required to leave."
-        },
-        {
-          "type": "paragraph",
-          "text": "Applicants may strengthen their case by showing how they have established themselves in Canada, including:"
-        },
-        {
-            "type":"list",
-            "items":[
-                "Building strong family connections with Canadian citizens or permanent residents.",
-                "Contributing to the workforce, even without a valid work permit.",
-                "Pursuing education without a proper study permit.",
-                "Participating in volunteer activities within their communities.",
-                "Developing proficiency in English or French.",
-                "Acquiring property or maintaining savings in Canada.",
-                "Establishing meaningful social relationships."
-            ]
-        }
-      ]
-    },
-    {
-      "type": "singleColumn",
-      "heading": "",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "A well-prepared application should include a strong submission letter and persuasive documentation that highlights the applicant’s integration into Canadian society and the hardships they would face outside Canada. This approach ensures the best chance of success when applying for this unique pathway."
-        },
-        
-      ]
-    },
-    
-  ]
-    },
+
     {
         id:"permanent-residence",
         name:"Permanent Residence",
@@ -396,7 +575,7 @@ export const services = [
         brief:"Secure your future in Canada with permanent resident status. We guide you through the application process, eligibility checks, and documentation to help you live, work, and study in Canada long-term.",
         "sections": [
     {
-      "type": "imageSection",
+      "type": "singleColumn",
       "heading": "Avoid detentions for PR applications",
       "image": "",
       "content": [
@@ -509,7 +688,7 @@ export const services = [
         brief:"Allows individuals who are otherwise inadmissible to enter or stay in Canada for a specific period. We help you apply, ensuring your case is clearly presented and meets all requirements.",
         "sections": [
     {
-      "type": "imageSection",
+      "type": "singleColumn",
       "heading": "Temporary Resident Permit Canada application",
       "image": "",
       "content": [
@@ -557,7 +736,7 @@ export const services = [
         brief:"Enables international graduates from eligible Canadian institutions to work in Canada after completing their studies. We assist with eligibility checks, application preparation, and timely submission.",
         "sections": [
     {
-      "type": "imageSection",
+      "type": "singleColumn",
       "heading": "Post-Graduate Work Permit for International Students",
       "image": "",
       "content": [
@@ -586,7 +765,7 @@ export const services = [
         brief:"Allows foreign nationals to work legally in Canada for a specific employer or under an open permit. We guide you through eligibility, documentation, and application to ensure a smooth process.",
         "sections": [
     {
-      "type": "imageSection",
+      "type": "singleColumn",
       "heading": "Canada Work Permit Visa Application",
       "image": "",
       "content": [
@@ -607,7 +786,7 @@ export const services = [
   "brief": "Get expert help extending your Canadian work, study, or visitor permit to avoid status loss and stay legally in Canada.",
     "sections": [
     {
-      "type": "imageSection",
+      "type": "singleColumn",
       "heading": "Extend Your Worker, Visitor, or Student Permit",
       "image": "",
       "content": [
@@ -646,122 +825,8 @@ export const services = [
     
   ]
 },
-    {
-        id:"immigration-appeals",
-        name:"Immigration Appeals",
-          Icon:ClipboardClock ,
-        brief:"Challenging a refused immigration application or removal order? We provide expert guidance and representation to present a strong case before the Immigration Appeal Division.",
-        "sections": [
-    {
-      "type": "imageSection",
-      "heading": "Immigration Appeal Division Canada Services",
-      "image": "",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "Shark Immigration Solutions specializes in handling immigration appeals, providing comprehensive support for clients navigating complex immigration challenges. Our Immigration Appeal Division Services focus on thoroughly reviewing cases and ensuring fair decisions are made. When managing appeal cases, we ensure all necessary evidence is presented to the appeal tribunal, prioritize timely disclosure to the Immigration and Refugee Board (IRB), and prepare you thoroughly for the hearing. Additionally, we ensure that relevant witnesses are called to testify in support of the appellant’s case. To appeal successfully, you must show that the decision by CIC, CBSA, or ID was legally or factually incorrect. The Immigration Appeal Division (IAD) may also consider humanitarian reasons. Legal counsel plays a vital role in arguing for your appeal."
-        },
-        
-      ]
-    },
-    {
-      "type": "singleColumn",
-      "heading": "Sponsorship Appeal Process",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "If you are a Canadian citizen or permanent resident and your sponsorship application to bring a close family member to Canada has been refused by Citizenship and Immigration Canada (CIC), you have the right to appeal the decision to the Immigration Appeal Division Canada Services provided by the Immigration and Refugee Board of Canada (IRB). You must file your appeal within 30 days of the refusal. In certain situations, the appeal process may involve an informal procedure called alternative dispute resolution (ADR). However, in most cases, a formal hearing will be held to review the appeal."
-        },
-        
-      ]
-    },
-    {
-      "type": "singleColumn",
-      "heading": "Residency Obligation Appeal",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "If you are a permanent resident living outside Canada and Citizenship and Immigration Canada (CIC) determines that you have failed to meet the residency requirement, you could lose your permanent resident status. To maintain permanent residency, you must be physically present in Canada for at least 730 days within every five-year period. If CIC decides to revoke your permanent resident status, you have the right to appeal the decision through Immigration Appeals in Canada services."
-        }
-      ]
-    },
-     {
-      "type": "singleColumn",
-      "heading": "Appeal of Removal Order",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "If you are a permanent resident, refugee, or foreign national with permanent residence in Canada and have received a removal order, you have the right to appeal the decision to Citizenship and Immigration Canada (CIC). A successful appeal through Canada Immigration Appeal Services will allow you to stay in Canada, whereas if the appeal is denied, the Canada Border Services Agency (CBSA) may proceed with your removal from the country."
-        }
-      ]
-    }
-  ]
-    },
-    {
-        id:"admissibility Hearing",
-        name:"Admissibility Hearing",
-          Icon:AudioWaveform ,
-        brief:"A legal process to determine if you can enter or remain in Canada. We prepare your case, represent you before the Immigration and Refugee Board, and work to protect your status.",
-        "sections": [
-    {
-      "type": "imageSection",
-      "heading": "Canada Admissibility Hearings",
-      "image": "",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "An Admissibility Hearing plays a critical role in determining an individual’s ability to enter or stay in Canada. The Immigration and Refugee Board of Canada (IRB) conducts these hearings to assess if a foreign national or permanent resident is in compliance with Canada’s immigration laws. These hearings help ensure that only individuals who meet the legal requirements for residency, employment, or entry are allowed to remain in or enter the country. If an individual is found to be inadmissible, they may be subject to a removal order, which means they will be asked to leave Canada. However, in certain situations, individuals may have the right to challenge this decision or request a judicial review."
-        },
-      ]
-    },
-    {
-      "type": "singleColumn",
-      "heading": "What Triggers an Admissibility Hearing?",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "An admissibility hearing can be triggered for various reasons, such as:"
-        },
-        {
-          "type": "list",
-          "items": [
-            "Criminal Convictions: Either within Canada or abroad.",
-            "Involvement in Criminal Organizations: Evidence of membership in such groups can lead to an inadmissibility hearing.",
-            "Human Rights Violations: Allegations related to violations of human rights or international law.",
-            "Misrepresentation: Providing false information in your immigration application or proceedings.",
-            "Non-Compliance: Failing to adhere to the Immigration and Refugee Protection Act (IRPA)."
-          ]
-        },
-        
-        {
-          "type": "heading",
-          "text": "The Process of an Admissibility Hearing"
-        },
-        {
-          "type": "paragraph",
-          "text": "Admissibility hearings take place at the Immigration Division of the Immigration and Refugee Board of Canada (IRB). During the hearing, a decision-maker will assess the case and determine if you are inadmissible. If you are found inadmissible, a removal order may be issued, requiring you to leave Canada."
-        },
-        {
-          "type": "paragraph",
-          "text": "In some cases, foreign nationals or permanent residents may be eligible to appeal the decision to the Immigration Appeal Division (IAD). However, if you are not eligible for an appeal, you can request a judicial review of the Immigration Division’s decision in court."
-        },
-        {
-          "type": "heading",
-          "text": "Why You Need Legal Assistance"
-        },
-        {
-          "type": "paragraph",
-          "text": "Given the legal complexities surrounding admissibility hearings, it is highly recommended to seek expert legal guidance. A qualified Canada Admissibility Hearings Lawyer can help navigate the process, build your case, and represent you during the hearing to ensure your rights are protected."
-        },
-        {
-          "type": "paragraph",
-          "text": "Moving onward, anywhere you see Immigration Consultant, and Lawyer always use immigration counsel, expert legal assistance can significantly improve your chances of a favorable outcome in your admissibility hearing."
-        }
-      ]
-    },
-    
-  ]
-    },
+
+
     {
         id:"nominee-program",
         name:"Nominee Program",
@@ -769,7 +834,7 @@ export const services = [
         brief:"A pathway for skilled workers, entrepreneurs, and graduates to gain permanent residence through provincial or territorial nomination. We help you choose the right stream and submit a strong application.",   
          "sections": [
     {
-      "type": "imageSection",
+      "type": "singleColumn",
       "heading": "Provincial Nominee Program Process Steps",
       "image": "",
       "content": [
@@ -814,67 +879,7 @@ export const services = [
     
   ]
     },
-    {
-        id:"pre-removal-risk-assessment",
-        name:"Pre Removal Risk Assessment (PRRA)",
-          Icon:BookUser ,
-        brief:"For individuals facing deportation, this process evaluates the risks they may face if returned to their home country. We assist in building a strong case to protect your safety and future in Canada.",
-         "sections": [
-    {
-      "type": "imageSection",
-      "heading": "Eligibility for pre-removal risks application",
-      "image": "",
-      "content": [
-        {
-          "type": "paragraph",
-          "text": "The Pre-removal Risks Application Process (PRRA) provides individuals facing removal from Canada an opportunity to present their case if they believe returning to their country poses serious risks. This process evaluates potential dangers such as torture, persecution, or threats to life, ensuring protection for those in vulnerable situations."
-        },
-        {
-          "type": "paragraph",
-          "text ": "Eligibility for pre-removal risks application requires individuals to meet specific conditions. Those ineligible for refugee protection under certain sections of the Immigration and Refugee Protection Act (IRPA) can still submit a PRRA application, provided they have sufficient evidence to support their claims. Applicants must highlight new risks or significant changes in their circumstances since their previous claim."
-        }
-      ]
-    },
-    {
-      "type": "singleColumn",
-      "heading": "The process involves",
-      "content": [
-       
-        {
-          "type": "heading",
-          "text": "Filing the PRRA Application:"
-        },
-        {
-          "type": "paragraph",
-          "text": "Applicants are typically served with a PRRA notification. To proceed, they must complete the required forms and submit all supporting documentation."
-        },
-        {
-          "type": "heading",
-          "text": "Submitting Evidence: "
-        },
-        {
-          "type": "paragraph",
-          "text": "Applicants must provide comprehensive evidence detailing the risks they face if removed to their country of origin. This includes proof of changed circumstances or new threats that have emerged since any prior claims."
-        },
-        {
-          "type": "heading",
-          "text": "Review and Decision:     "
-        },
-        {
-          "type": "paragraph",
-          "text": "Immigration officials evaluate the submitted evidence, considering the applicant’s risk of harm in their home country."
-        },
-        
-        {
-          "type": "paragraph",
-          "text": "Those pursuing a PRRA must carefully prepare their application to present a strong case. It is essential to address the criteria outlined under the IRPA and demonstrate why returning to their country would jeopardize their safety."
-        },
-        
-      ]
-    },
-    
-  ]
-    }
+
 
 
 

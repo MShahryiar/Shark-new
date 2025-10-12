@@ -1,18 +1,18 @@
 import React, {useEffect} from 'react'
 import {motion} from "framer-motion"
 import { BadgeCheck, MoveRight } from 'lucide-react';
-import {useNavigate} from "react-router-dom"
+import {useNavigate, Link} from "react-router-dom"
 
 const About = () => {
   const navigate = useNavigate()
   useEffect(() => {
   const img = new Image();
-  img.src = "./images/ServiceBg.jpg";
+  img.src = "/images/serviceBanner.avif";
 }, []);
   return (
-      <div className='min-h-screen justify-evenly mx-auto md:p-20  flex md:flex-row flex-col-reverse '>
+      <div className='min-h-screen justify-evenly mx-auto md:p-20  flex md:flex-row flex-colw '>
 
-          <div className='w-1/1  mx-auto p-10 flex-1 flex flex-col justify-center  items-center md:items-start'>
+          <div className='w-full overflow-x-hidden  mx-auto p-10 flex-1 flex flex-col justify-center  items-center md:items-start'>
           <h2 className='font-medium text-secondary text-md mb-3 uppercase'>About the company</h2>
             <h2 className='text-primary text-3xl text-center md:text-left font-medium capitalize mb-5'>Your trusted experts in Canadian immigration consulting.</h2>
             <motion.p 
@@ -39,16 +39,34 @@ Our mission is to open doors to Canada through trusted guidance, proven strategi
               <li className='flex gap-2 items-center '><BadgeCheck className='size-7 whitespace-nowrap text-secondary'/>Guidance for Study, Work, PR</li>
             </ul>
             <h4>Canada is calling—are you ready to answer?</h4> */}
+            {/* <Link to={"https://calendly.com/sharkimmigrationca/free-consultation"} target='_blank'> 
             <motion.button 
              initial={{opacity:0, x:-20}}
-      whileInView={{opacity:1, x:0}}
-      transition={{duration:0.3}}
-            className='group rounded-md flex gap-5 whitespace-nowrap my-10 
-            cursor-pointer px-5 py-3 
-            bg-primary text-white duration-500 
-            hover:border-transparent hover:-translate-y-2'
-            onClick={()=>navigate("/contact")}
-            > Book Your Free Consultation </motion.button>
+             whileInView={{opacity:1, x:0}}
+             transition={{duration:0.3}}
+             className='group rounded-md flex gap-5 whitespace-nowrap my-10 
+             cursor-pointer px-5 py-3 
+             bg-primary text-white duration-500 
+             hover:border-transparent hover:-translate-y-2'
+             onClick={()=>("/contact")}
+             > Book Your Free Consultation </motion.button>
+             </Link> */}
+             <motion.a
+  href="https://calendly.com/sharkimmigrationca/free-consultation"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Book a free consultation with Shark Immigration on Calendly"
+  initial={{ opacity: 0, x: -20 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.3 }}
+  className="group inline-flex gap-5 whitespace-nowrap my-10 
+             cursor-pointer px-5 py-3 rounded-md
+             bg-primary text-white duration-500 
+             hover:border-transparent hover:-translate-y-2"
+>
+  Book Your Free Consultation
+</motion.a>
+
 
             
           </div>
@@ -59,7 +77,7 @@ Our mission is to open doors to Canada through trusted guidance, proven strategi
   whileInView={{ opacity: 1, x:0 }}
   transition={{ duration: 0.6, ease: "easeOut" }}
   loading='lazy'
-                src="./images/ServiceBg.jpg" className='w-full h-[400px] object-cover rounded-md'/>
+                src="/images/serviceBanner.avif" className='w-full h-[400px] object-cover rounded-md'/>
             </div>
             {/* <div className=' flex max-md:h-fit'>
                <motion.img 

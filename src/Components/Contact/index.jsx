@@ -10,10 +10,10 @@ const Contact = () => {
             <div className='flex flex-col items-center'>
 
             <h6 className='text-white'>Get free Assessment Today!</h6>
-            <h5 className='text-4xl text-white font-bold'>Feel Free To Inquire.</h5>
+            <h5 className='text-4xl text-white text-center font-bold'>Feel Free To Inquire.</h5>
             <form 
             action="https://formsubmit.co/1751026aa6275ac7477211ff3d40d6f3"  method='POST'
-            className='flex flex-col gap-5 my-5 items-center' >
+            className='flex flex-col gap-5 my-5 px-10 items-center' >
                 <input type="text"  className='rounded-md bg-[#476c92] w-full p-3 placeholder:text-gray-200 focus-0 border-0 outline-0 text-gray-200' name='full_name' placeholder='Full Name' />
                 <input type="email"  className='rounded-md bg-[#476c92] w-full p-3 placeholder:text-gray-200 focus-0 border-0 outline-0 text-gray-200' name='email' placeholder='Email' />
                 <input type="hidden" name="_subject" value="New submission!"/>

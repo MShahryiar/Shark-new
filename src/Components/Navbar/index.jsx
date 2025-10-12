@@ -8,6 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 import { useNavigate } from 'react-router-dom';
+import SocialIcons from '../SocialIcons';
 const Navbar = () => {
   const navigate = useNavigate()
 const [showFixedNavbar, setShowFixedNavbar] = useState(false);
@@ -25,6 +26,14 @@ useEffect(() => {
   };
 }, [showSideNavbar]);
 
+useEffect(() => {
+  const handleEsc = (e) => {
+    if (e.key === 'Escape') setShowSideNavbar(false);
+  };
+  window.addEventListener('keydown', handleEsc);
+  return () => window.removeEventListener('keydown', handleEsc);
+}, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setShowFixedNavbar(window.scrollY > 100);
@@ -36,14 +45,14 @@ useEffect(() => {
   
   return (  
     <>
-    <div  className={`transition-opacity border-b-1 border-gray-200 shadow-sm bg-transparent duration-500  ${
+    <div  className={`transition-opacity bg-green-200 border-b-1 border-gray-200 shadow-sm bg-transparent duration-500  ${
           showFixedNavbar ? 'opacity-0 pointer-events-none' : 'opacity-100'
         } py-4 px-6  text-white`}>
-      <div className='  w-5/6 flex justify-between  items-center mx-auto'>
-          <img src="/images/Logo.png"   className='h-20 cursor-pointer w-auto object-cover' alt='logo'
+      <div className='  w-5/6 flex justify-between items-center mx-auto'>
+          <img src="/images/Logo.avif"   className='h-20 cursor-pointer w-auto object-cover' alt='logo'
             onClick={()=>navigate("/")}
           />
-          <ul className='gap-5 font-semibold hidden md:flex'>
+          <nav className='gap-5 font-semibold hidden md:flex items-center'>
              <Link className="group inline-block relative cursor-pointer" to={"/about"}>
                 <span className="text-black  group-hover:text-red-500">About</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
@@ -56,10 +65,25 @@ useEffect(() => {
                 <span className="text-black group-hover:text-red-500">Contact</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-          </ul>
-          <AlignJustify className='h-6 w-6 cursor-pointer  text-black block md:hidden'
-             onClick={()=>setShowSideNavbar(!showSideNavbar)}
-          />
+            <Link 
+            to={"https://calendly.com/sharkimmigrationca/free-consultation"} 
+            target='_blank'
+            className='bg-primary px-5 py-2 rounded-full text-white hover:-translate-y-1 duration-300'
+            >         
+              Free Consultation
+            </Link>
+
+          </nav>
+          <button
+            aria-label="Open menu" 
+            className="md:hidden block"
+            onClick={()=>setShowSideNavbar(!showSideNavbar)}
+          >
+
+          <AlignJustify className='h-6 w-6 cursor-pointer  text-black '
+             
+             />
+            </button>
 
 
       </div>
@@ -67,29 +91,41 @@ useEffect(() => {
 
     {/* animated one */}
     <div 
-      className={`fixed top-0  left-0 w-full z-20 transition-transform duration-500 ${
+      className={`fixed top-0  left-0 w-full  z-20 transition-transform duration-500 ${
           showFixedNavbar ? 'translate-y-0' : '-translate-y-full'
-        } bg-white shadow-md`}
+        }  `}
     >
-      <div className='  w-5/6 flex justify-between items-center p-2 mx-auto'>
-          <img src="/images/Logo.png" className='h-20  w-auto object-cover cursor-pointer'
+      <div className=' bg-white rounded-full px-10 mt-5 shadow-2xl w-5/6 flex justify-between items-center p-2 mx-auto'>
+          <img src="/images/Logo.avif" className='h-16  w-auto object-cover cursor-pointer'
             onClick={()=>navigate("/")}
           />
-          <ul className='gap-5 font-semibold hidden md:flex'>
-             <Link className="text-xl group inline-block relative cursor-pointer" to={"/about"}>
+          <nav className='gap-5 font-semibold hidden md:flex items-center'>
+             <Link className="text-md group inline-block relative cursor-pointer" to={"/about"}>
                 <span className="text-black  group-hover:text-red-500">About</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-<Link className="text-xl group inline-block relative cursor-pointer" to={"/Services"}>
+<Link className="text-md group inline-block relative cursor-pointer" to={"/Services"}>
                 <span className="text-black group-hover:text-red-500">Services</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-             <Link className="text-xl group inline-block relative cursor-pointer" to={"/Contact"}>
+             <Link className="text-md group inline-block relative cursor-pointer" to={"/Contact"}>
                 <span className="text-black group-hover:text-red-500">Contact</span>
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-          </ul>
-          <AlignJustify className='h-6 w-6 cursor-pointer  block md:hidden' onClick={()=>setShowSideNavbar(!showSideNavbar)}/>
+            <Link 
+            to={"https://calendly.com/sharkimmigrationca/free-consultation"} 
+            target='_blank'
+            className='bg-primary px-5 py-2 rounded-full text-white hover:-translate-y-1 duration-300'
+            >         
+              Free Consultation
+            </Link>
+          </nav>
+          <button
+          className='block md:hidden'
+          onClick={()=>setShowSideNavbar(!showSideNavbar)}
+          >
+          <AlignJustify className='h-6 w-6 cursor-pointer  ' />
+          </button>
 
 
       </div>
@@ -110,6 +146,9 @@ useEffect(() => {
           onClick={()=>setShowSideNavbar(false)}
           ></motion.div>
        <motion.div 
+        role="dialog"
+        aria-modal="true"
+        aria-label="Main menu"
        className='fixed top-0 right-0 w-[300px] h-screen bg-white text-blue-950 z-50 md:hidden block'
        initial={{  right:"-100%" }}
        animate={{  right:0 }}
@@ -117,10 +156,10 @@ useEffect(() => {
        transition={{ delay:0.5, duration: 0.5 }}
        >
           <div className='h-fit relative'>
-            <img src={"/images/Logo.png"}  className='cursor-pointer h-44 px-5 object-cover' alt="image2" 
+            <img src={"/images/Logo.avif"}  className='cursor-pointer h-44 px-5 object-cover' alt="image2" 
                 onClick={()=>navigate("/")}
             />
-          <motion.div
+          <motion.button
   whileHover={{
     rotate: 90,
     scale: 1.1,
@@ -131,23 +170,23 @@ useEffect(() => {
   onClick={()=>setShowSideNavbar(false)}
 >
   <X className="w-6 h-6 text-black" />
-</motion.div>
+</motion.button>
           </div>
             <nav className='flex flex-col text-xs'>
-              <li className='px-3 py-2 font-medium  uppercase list-none inset-0 border-t-1 border-b-1 border-gray-500  hover:bg-blue-950 hover:text-white text-red-500   cursor-pointer duration-300'
-                onClick={()=>navigate("/")}
-              >Home</li>
-              <li className='px-3 py-2 font-medium  uppercase list-none inset-0  border-b-gray-500 border-b-1 cursor-pointer duration-300   hover:bg-blue-950 hover:text-white text-red-500'
-                onClick={()=>navigate("/about")}
-              >About</li>
-              <li className='px-3 py-2 font-medium  uppercase list-none inset-0 border-b-gray-500 border-b-1   cursor-pointer duration-300   hover:bg-blue-950 hover:text-white text-red-500'
-                onClick={()=>navigate("/contact")}
+             <Link className='px-3 py-2 font-semibold  uppercase list-none inset-0 border-t-1 border-b-1 border-gray-500  hover:bg-blue-950 hover:text-white   cursor-pointer duration-300'
+                to={"/"}
+              >Home</Link>
+             <Link className='px-3 py-2 font-semibold  uppercase list-none inset-0  border-b-gray-500 border-b-1 cursor-pointer duration-300   hover:bg-blue-950 hover:text-white '
+                to={"/about"}
+              >About</Link>
+             <Link className='px-3 py-2 font-semibold  uppercase list-none inset-0 border-b-gray-500 border-b-1   cursor-pointer duration-300   hover:bg-blue-950 hover:text-white '
+                to={"/contact"}
               
-              >Contact</li>
-              {/* <li className='px-3 py-2 font-medium  uppercase list-none inset-0  border-b-gray-500 border-b-1 cursor-pointer duration-300   hover:bg-blue-950 hover:text-white text-red-500'>Testimonials</li> */}
-              <li className='px-3 py-2 font-medium  border-b-gray-500 border-b-1 uppercase list-none inset-0   cursor-pointer duration-300   hover:bg-blue-950 hover:text-white text-red-500'
-                onClick={()=>navigate("/services")}
-              >Services</li>
+              >Contact</Link>
+              <Link className='px-3 py-2 font-semibold  uppercase list-none inset-0 border-b-gray-500 border-b-1   cursor-pointer duration-300   hover:bg-blue-950 hover:text-white '
+                to={"https://calendly.com/sharkimmigrationca/free-consultation"}
+                target='_blank'
+              >Free Consultation</Link>
             </nav>
 
             <div>
@@ -159,7 +198,7 @@ useEffect(() => {
   className="flex gap-2 items-center text-xs group hover:text-red-500"
 >
   <MapPin className="h-4 w-4" />
-  <span>211 Watline Avenue Mississauga, ON</span>
+  <span>Mississauga | Winnipeg | Calgary</span>
 </a>
 
 <a
@@ -175,22 +214,9 @@ useEffect(() => {
             </div>
              
         </div>
-                    <div className="flex mt-5 w-4/6 mx-auto justify-between text-xl text-red-500">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF className="hover:text-blue-950 transition-colors duration-500" />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="hover:text-blue-950 transition-colors duration-500" />
-              </a>
-              <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-                <SiTiktok className="hover:text-blue-950 transition-colors duration-500" />
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                <FaYoutube className="hover:text-blue-950 transition-colors duration-500" />
-              </a>
-              <a href="https://x.com/sharkimmca" target="_blank" rel="noopener noreferrer">
-                <FaXTwitter className="hover:text-blue-950 transition-colors duration-500" />
-              </a>
+                    <div className="flex mt-5 mx-5 justify-start text-xl text-red-500">
+                    <SocialIcons/>
+          
             </div>
             </div>
             

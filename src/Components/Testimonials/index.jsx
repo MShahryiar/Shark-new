@@ -30,6 +30,7 @@ const Testimonials = () => {
 Thank you Daniyal and Team.</p>
             <h2 className='text-primary   text-md mt-5'>— Manjot Sandhu<br /></h2>
           </div>
+          
             
         </div>
       </div>

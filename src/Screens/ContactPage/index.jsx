@@ -12,6 +12,7 @@ import FAQData from "../../data/faqs.js"
 import FAQ from "../../Components/FAQ";
 import { useState } from "react";
 import ScrollTop from "../../Utils/ScrollTop.js";
+import { Helmet } from "react-helmet";
 const ContactPage = () => {
   
   const [openCategory, setOpenCategory] = useState(null)
@@ -21,6 +22,14 @@ const ContactPage = () => {
   }
   return (
     <div>
+       <Helmet>
+        <title>Contact Us | Shark Immigration Solutions</title>
+        <meta
+          name="description"
+          content="Get in touch with Shark Immigration Solutions. We're here to answer your immigration questions and guide you through every step of your Canadian journey."
+        />
+        <meta name="keywords" content="contact, immigration consultant, Canada visa, Shark Immigration" />
+      </Helmet>
       <ScrollTop/>
       <SocialNav/>
       <Navbar/>
@@ -77,37 +86,40 @@ const ContactPage = () => {
             {/* left FORM */}
            
 
-       <form className="h-fit  grid col-span-2 grid-cols-1 md:grid-cols-2 gap-5 p-10 w-full">
+       <form className="h-fit  grid col-span-2 grid-cols-1 md:grid-cols-2 gap-5 p-10 w-full"
+        action="https://formsubmit.co/support@shark-immigration.ca"
+        method="POST"
+       >
   {/* First row: First + Last name */}
   <div className="flex flex-col gap-1">
     <label htmlFor="fname" className="text-sm text-gray-600 font-bold">First Name</label>
-    <input type="text" id="fname" placeholder="First Name"
+    <input type="text" id="fname" name="first-name" placeholder="First Name"
       className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
   </div>
 
   <div className="flex flex-col gap-1">
     <label htmlFor="lname" className="text-sm text-gray-600 font-bold">Last Name</label>
-    <input type="text" id="lname" placeholder="Last Name"
+    <input type="text" id="lname" name="last-name" placeholder="Last Name"
       className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
   </div>
 
   {/* Second row: Email + Phone */}
   <div className="flex flex-col gap-1">
     <label htmlFor="email" className="text-sm text-gray-600 font-bold">Email</label>
-    <input type="text" id="email" placeholder="Email"
+    <input type="text" id="email" name="email" placeholder="Email"
       className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
   </div>
 
   <div className="flex flex-col gap-1">
     <label htmlFor="phone" className="text-sm text-gray-600 font-bold">Phone</label>
-    <input type="text" id="phone" placeholder="Phone"
+    <input type="text" id="phone" name="phone" placeholder="Phone"
       className="indent-2 py-2 text-gray-700 border border-gray-500 rounded" />
   </div>
 
   {/* Full width fields */}
   <div className="flex flex-col gap-1 col-span-1 md:col-span-2">
     <label htmlFor="message" className="text-sm text-gray-600 font-bold">Message</label>
-    <textarea id="message" placeholder="Message"
+    <textarea id="message" name="message" placeholder="Message"
       className="indent-2 py-2 text-gray-700 border border-gray-500 rounded"></textarea>
   </div>
 
@@ -131,6 +143,11 @@ const ContactPage = () => {
   {/* Submit button full width */}
   <input type="submit" value="Send Message"
     className="bg-primary text-white rounded col-span-1 md:col-span-2 py-5 text-lg cursor-pointer" />
+
+    <input type="hidden" name="_subject" value="New submission - Contact Page!"/>
+                <input type="hidden" name="_next" value="http://localhost:5173/thank"/>
+                <input type="hidden" name="_autoresponse" value="Thank you for your message. Our team has received your inquiry and will respond as soon as possible."/>
+                <input type="hidden" name="_template" value="table"/>
 </form>
        
             {/* Contact information */}
@@ -196,7 +213,6 @@ const ContactPage = () => {
       <div className="flex flex-col  gap-2 ">
 
           {FAQData.map((cat, i)=>(
-            <>
             <FAQ  
             key={i}
           index={i}
@@ -204,13 +220,7 @@ const ContactPage = () => {
           faqs={cat.faqs}
           isOpen={openCategory === i}
           onToggle={toggleCategory}/>
-            {/* <ul>
-              {categories.faqs.map((faq)=>(
-                <li>{faq.question}</li>
-                ))}
-                </ul> */}
-            </>
-          ))}
+                    ))}
           </div>
       </div>
 

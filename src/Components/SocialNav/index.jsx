@@ -17,7 +17,7 @@ const SocialNav = () => {
     className="list-none flex gap-1 px-2 items-center hover:underline"
   >
     <MapPin className="h-5 w-5 text-secondary" />
-    <span className="text-sm">211 Watline Avenue, Mississauga</span>
+    <span className="text-sm">Mississauga | Winnipeg | Calgary</span>
   </a>
 
   {/* Email */}

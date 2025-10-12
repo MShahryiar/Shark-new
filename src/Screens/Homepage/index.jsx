@@ -13,10 +13,22 @@ import Expertise from '../../Components/Expertise'
 import Banner from "../../Components/Banner"
 
 import ScrollTop from "../../Utils/ScrollTop.js"
+import { Helmet } from 'react-helmet'
 const Homepage = () => {
  
   return (
     <>
+    <div className='overflow-x-hidden'>
+       <Helmet>
+        <title>Shark Immigration Solutions | Canadian Immigration Experts</title>
+        <meta
+          name="description"
+          content="Welcome to Shark Immigration Solutions. We provide trusted Canadian immigration, visa, and study permit services to make your journey stress-free and successful."
+        />
+        <meta name="keywords" content="Canadian immigration, visa, study permit, PR, citizenship" />
+        <meta name="author" content="Shark Immigration Solutions" />
+      </Helmet>
+
     <ScrollTop/>
       <SocialNav/>
       <Navbar/>
@@ -26,13 +38,12 @@ const Homepage = () => {
       <Services/>
       <How/>
       <ServicesTwo/>
-      <div className='p-10'>
       <CTA/>
-      </div>
       <Contact/>
       <Expertise/>
       <Testimonials/>
       <Footer/>
+    </div>
 
     </>
   )

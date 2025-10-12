@@ -122,9 +122,43 @@ import React, { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 import SliderData from "./sliderData.js";
+import { useNavigate } from "react-router-dom";
 
 export const Carousel = () => {
+  const navigate = useNavigate()
+     const headingVariant = {
+    hidden: { opacity: 0, x: 80 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+    },
+  };
+
+  const subheadingVariant = {
+    hidden: { opacity: 0, x: -80 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.6 },
+    },
+  };
+
+const buttonVariant = {
+  hidden: { opacity: 0, y: 20, visibility: "hidden" },
+  show: {
+    opacity: 1,
+    y: 0,
+    visibility: "visible",
+    transition: {
+      duration: 0.3 ,
+      ease: "easeOut",
+      delay: 1, // plays after heading & subheading
+    },
+  },
+};
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = SliderData.length;
 
@@ -158,6 +192,7 @@ export const Carousel = () => {
             // exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
             className="w-full h-full object-cover"
+            alt={SliderData[currentSlide].image+"slide image"}
           />
         </AnimatePresence>
       </div>
@@ -166,11 +201,14 @@ export const Carousel = () => {
       <AnimatePresence mode="wait">
         <motion.h1
           key={SliderData[currentSlide].headline}
-          initial={{ y: -40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          // exit={{ y: -40, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="uppercase text-white text-center font-bold  max-w-sm md:max-w-3xl p-2 z-10 mt-16 text-3xl md:text-4xl"
+          // initial={{ y: -40, opacity: 0 }}
+          // animate={{ y: 0, opacity: 1 }}
+          // // exit={{ y: -40, opacity: 0 }}
+          // transition={{ duration: 0.5 }}
+         variants={headingVariant}
+        initial="hidden"
+        animate="show"
+          className="uppercase text-white text-center font-bold  max-w-sm md:max-w-3xl p-2 z-10 mt-16 text-3xl md:text-5xl"
         >
           {SliderData[currentSlide].headline}
         </motion.h1>
@@ -180,10 +218,13 @@ export const Carousel = () => {
       <AnimatePresence mode="wait">
         <motion.h2
           key={SliderData[currentSlide].subtext}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          // exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.4}}
+          // initial={{ opacity: 0, x: -20 }}
+          // animate={{ opacity: 1, x: 0 }}
+          // // exit={{ opacity: 0, y: -20 }}
+          // transition={{ duration: 0.4}}
+           variants={subheadingVariant}
+        initial="hidden"
+        animate="show"
           className="text-white text-lg max-md:max-w-2xs text-center md:text-xl p-2 z-10"
         >
           {SliderData[currentSlide].subtext}
@@ -193,15 +234,26 @@ export const Carousel = () => {
       {/* Button */}
     <AnimatePresence mode="wait">
   <motion.button
-    key={SliderData[currentSlide].buttonText}
-    initial={{ y:20 }}
-    animate={{ opacity: 1, y:0 }}
-    // exit={{ opacity: 0, y: -20 }}
-    transition={{
-    y: { duration: 0.6, ease: "easeOut" },
-    opacity: { duration: 0.4, delay: 0.3 } // only fades in at the end
+  onClick={()=>{
+    const link = SliderData[currentSlide].buttonLink;
+  if (link.startsWith("http")) {
+    window.open(link, "_blank");  
+  } else {
+    navigate(link); 
+  }
   }}
-    className="text-white opacity-0 w-fit px-5 py-2 rounded-md cursor-pointer z-10 text-center
+    key={SliderData[currentSlide].buttonText}
+    // initial={{ y:20 }}
+    // animate={{ opacity: 1, y:0 }}
+    // exit={{ opacity: 0, y: -20 }}
+  //   transition={{
+  //   y: { duration: 0.6, ease: "easeOut" },
+  //   opacity: { duration: 0.4, delay: 0.3 } // only fades in at the end
+  // }}
+   variants={buttonVariant}
+        initial="hidden"
+        animate="show"
+    className="text-white text-sm md:text-lg opacity-0 w-fit md:px-10 md:py-5 py-2 px-5 font-medium uppercase rounded-md cursor-pointer z-10 text-center
     hover:bg-[#e70013] duration-500 bg-primary"
   >
     {SliderData[currentSlide].buttonText}
@@ -210,13 +262,13 @@ export const Carousel = () => {
 
       {/* Navigation Arrows */}
       <button
-        className="absolute top-1/2 left-5 p-2 z-100 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500"
+        className="absolute hidden md:block top-1/2 left-5 p-2 z-100 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500"
         onClick={prevSlide}
       >
         <ChevronLeft className="text-white h-8 w-8" />
       </button>
       <button
-        className="absolute top-1/2 right-5 p-2 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500 z-100"
+        className="absolute top-1/2 hidden md:block right-5 p-2 z-100 rounded-full cursor-pointer border-2 border-white hover:bg-red-500 hover:border-transparent duration-500"
         onClick={nextSlide}
       >
         <ChevronRight className="text-white h-8 w-8" />

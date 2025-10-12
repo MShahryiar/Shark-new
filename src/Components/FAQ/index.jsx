@@ -5,7 +5,7 @@ import Question from './Question';
 import {motion, AnimatePresence} from "framer-motion"
 
 const FAQ = ({title, index, faqs, isOpen, onToggle}) => {
-  const [openQuestion, setOpenQuestion] = useState(null)
+  const [openQuestion, setOpenQuestion] = useState(0)
 
   const toggleQuestion = (qIndex)=>{
     setOpenQuestion(openQuestion === qIndex ? null:qIndex)
